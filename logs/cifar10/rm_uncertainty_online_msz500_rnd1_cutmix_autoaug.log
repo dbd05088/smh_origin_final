@@ -1,0 +1,1476 @@
+[INFO] main.py:222 > Set the device (cuda)
+[INFO] main.py:267 > Using train-transforms Compose(
+    RandomHorizontalFlip(p=0.5)
+    RandomCrop(size=(32, 32), padding=4)
+    ToTensor()
+    Normalize(mean=(0.4914, 0.482158, 0.4465231), std=(0.247032, 0.243485, 0.2615877))
+)
+[INFO] augment.py:18 > cifar10: autoaugmentation is applied
+[INFO] main.py:290 > Using train-transforms [AutoAugment CIFAR10 Policy]
+[INFO] main.py:300 > [1] Select a CIL method (rm)
+[INFO] method_manager.py:48 > CIL Scenario: 
+[INFO] main.py:306 > [2] Incrementally training 5 tasks
+[INFO] main.py:316 > [2-1] Prepare a datalist for the current task
+[INFO] main.py:349 > [2-2] Set environment for the current task
+[INFO] finetune.py:104 > Apply before_task
+[INFO] finetune.py:146 > Reset the optimizer and scheduler states
+[INFO] finetune.py:152 > Increasing the head of fc 2 -> 10
+[INFO] main.py:357 > [2-3] Start to train under online
+[INFO] main.py:372 > Train over streamed data once
+[INFO] rainbow_memory.py:120 > Streamed samples: 800
+[INFO] rainbow_memory.py:121 > In-memory samples: 0
+[INFO] rainbow_memory.py:122 > Pseudo samples: 9984
+[INFO] rainbow_memory.py:128 > Train samples: 10784
+[INFO] rainbow_memory.py:129 > Test samples: 2000
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 1/1 | train_loss 0.7103 | train_acc 0.6212 | test_loss 0.4921 | test_acc 0.7680 | lr 0.0050
+[INFO] finetune.py:169 > Update memory over 10 classes by uncertainty
+[WARNING] finetune.py:736 > Fill the unused slots by breaking the equilibrium.
+[INFO] finetune.py:223 > Memory statistic
+[INFO] finetune.py:225 > 
+deer    277
+dog     223
+Name: klass, dtype: int64
+[INFO] main.py:388 > Train over memory
+[INFO] rainbow_memory.py:120 > Streamed samples: 0
+[INFO] rainbow_memory.py:121 > In-memory samples: 500
+[INFO] rainbow_memory.py:122 > Pseudo samples: 0
+[INFO] rainbow_memory.py:128 > Train samples: 500
+[INFO] rainbow_memory.py:129 > Test samples: 2000
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 1/256 | train_loss 0.7084 | train_acc 0.6580 | test_loss 0.7505 | test_acc 0.6195 | lr 0.0050
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 2/256 | train_loss 5.9074 | train_acc 0.5320 | test_loss 400.2699 | test_acc 0.5000 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 3/256 | train_loss 2.4445 | train_acc 0.5220 | test_loss 11.9381 | test_acc 0.5000 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 4/256 | train_loss 1.2579 | train_acc 0.5220 | test_loss 0.7137 | test_acc 0.6585 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 5/256 | train_loss 1.4369 | train_acc 0.5320 | test_loss 2.1060 | test_acc 0.5000 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 6/256 | train_loss 1.2017 | train_acc 0.5500 | test_loss 0.6763 | test_acc 0.5805 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 7/256 | train_loss 0.7520 | train_acc 0.6020 | test_loss 0.6763 | test_acc 0.5740 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 8/256 | train_loss 0.7273 | train_acc 0.5800 | test_loss 0.7194 | test_acc 0.5165 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 9/256 | train_loss 1.1971 | train_acc 0.5400 | test_loss 0.7674 | test_acc 0.5000 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 10/256 | train_loss 1.0393 | train_acc 0.5780 | test_loss 0.6822 | test_acc 0.5765 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 11/256 | train_loss 0.9603 | train_acc 0.5900 | test_loss 0.6593 | test_acc 0.5770 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 12/256 | train_loss 0.8151 | train_acc 0.5800 | test_loss 0.7444 | test_acc 0.5140 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 13/256 | train_loss 0.6757 | train_acc 0.5940 | test_loss 0.7202 | test_acc 0.5405 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 14/256 | train_loss 0.6542 | train_acc 0.6280 | test_loss 0.7033 | test_acc 0.5585 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 15/256 | train_loss 0.6311 | train_acc 0.6440 | test_loss 0.7677 | test_acc 0.5500 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 16/256 | train_loss 0.6476 | train_acc 0.6420 | test_loss 0.6868 | test_acc 0.5850 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 17/256 | train_loss 0.7150 | train_acc 0.6200 | test_loss 0.5796 | test_acc 0.7230 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 18/256 | train_loss 0.7059 | train_acc 0.6480 | test_loss 0.6267 | test_acc 0.6455 | lr 0.0495
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 19/256 | train_loss 0.7692 | train_acc 0.5980 | test_loss 0.6260 | test_acc 0.6410 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 20/256 | train_loss 0.6866 | train_acc 0.6060 | test_loss 0.6168 | test_acc 0.6425 | lr 0.0458
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 21/256 | train_loss 0.6617 | train_acc 0.6460 | test_loss 0.6399 | test_acc 0.6575 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 22/256 | train_loss 0.6845 | train_acc 0.6540 | test_loss 0.6898 | test_acc 0.6255 | lr 0.0390
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 23/256 | train_loss 0.6565 | train_acc 0.6580 | test_loss 0.7061 | test_acc 0.5805 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 24/256 | train_loss 0.5982 | train_acc 0.6760 | test_loss 0.6336 | test_acc 0.6375 | lr 0.0301
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 25/256 | train_loss 0.6147 | train_acc 0.6780 | test_loss 0.6038 | test_acc 0.6650 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 26/256 | train_loss 0.6216 | train_acc 0.6580 | test_loss 0.6857 | test_acc 0.6125 | lr 0.0204
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 27/256 | train_loss 0.6195 | train_acc 0.6760 | test_loss 0.6037 | test_acc 0.6670 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 28/256 | train_loss 0.6140 | train_acc 0.6740 | test_loss 0.6357 | test_acc 0.6460 | lr 0.0115
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 29/256 | train_loss 0.6009 | train_acc 0.6920 | test_loss 0.5564 | test_acc 0.6995 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 30/256 | train_loss 0.6034 | train_acc 0.6580 | test_loss 0.6340 | test_acc 0.6390 | lr 0.0047
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 31/256 | train_loss 0.6365 | train_acc 0.6680 | test_loss 0.7013 | test_acc 0.6010 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 32/256 | train_loss 0.5826 | train_acc 0.7060 | test_loss 0.6556 | test_acc 0.6225 | lr 0.0010
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 33/256 | train_loss 0.7585 | train_acc 0.6480 | test_loss 0.6045 | test_acc 0.6565 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 34/256 | train_loss 0.6466 | train_acc 0.6600 | test_loss 0.7038 | test_acc 0.6155 | lr 0.0499
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 35/256 | train_loss 0.6901 | train_acc 0.6540 | test_loss 0.5978 | test_acc 0.6785 | lr 0.0495
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 36/256 | train_loss 0.7273 | train_acc 0.6180 | test_loss 0.6266 | test_acc 0.6540 | lr 0.0489
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 37/256 | train_loss 0.7182 | train_acc 0.5900 | test_loss 0.7792 | test_acc 0.5520 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 38/256 | train_loss 0.7881 | train_acc 0.6120 | test_loss 0.6185 | test_acc 0.6780 | lr 0.0471
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 39/256 | train_loss 0.7634 | train_acc 0.6500 | test_loss 0.6293 | test_acc 0.6585 | lr 0.0458
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 40/256 | train_loss 0.6368 | train_acc 0.6940 | test_loss 0.6977 | test_acc 0.6270 | lr 0.0444
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 41/256 | train_loss 0.6378 | train_acc 0.6440 | test_loss 0.6792 | test_acc 0.6360 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 42/256 | train_loss 0.5931 | train_acc 0.7060 | test_loss 0.4886 | test_acc 0.7610 | lr 0.0410
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 43/256 | train_loss 0.6160 | train_acc 0.6680 | test_loss 0.8367 | test_acc 0.5825 | lr 0.0390
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 44/256 | train_loss 0.5975 | train_acc 0.6460 | test_loss 0.7367 | test_acc 0.6400 | lr 0.0369
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 45/256 | train_loss 0.6116 | train_acc 0.6880 | test_loss 0.5299 | test_acc 0.7395 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 46/256 | train_loss 0.5943 | train_acc 0.7180 | test_loss 0.6691 | test_acc 0.6890 | lr 0.0324
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 47/256 | train_loss 0.6360 | train_acc 0.6720 | test_loss 0.6331 | test_acc 0.6665 | lr 0.0301
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 48/256 | train_loss 0.6239 | train_acc 0.6660 | test_loss 0.5190 | test_acc 0.7400 | lr 0.0277
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 49/256 | train_loss 0.6110 | train_acc 0.7020 | test_loss 0.5919 | test_acc 0.7020 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 50/256 | train_loss 0.5705 | train_acc 0.7040 | test_loss 0.5979 | test_acc 0.6885 | lr 0.0228
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 51/256 | train_loss 0.6322 | train_acc 0.6720 | test_loss 0.8012 | test_acc 0.6225 | lr 0.0204
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 52/256 | train_loss 0.5713 | train_acc 0.7320 | test_loss 0.5153 | test_acc 0.7465 | lr 0.0181
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 53/256 | train_loss 0.5405 | train_acc 0.7340 | test_loss 0.5046 | test_acc 0.7620 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 54/256 | train_loss 0.5667 | train_acc 0.7120 | test_loss 0.6159 | test_acc 0.6965 | lr 0.0136
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 55/256 | train_loss 0.5125 | train_acc 0.7660 | test_loss 0.5604 | test_acc 0.7290 | lr 0.0115
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 56/256 | train_loss 0.5497 | train_acc 0.7160 | test_loss 0.4853 | test_acc 0.7720 | lr 0.0095
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 57/256 | train_loss 0.5585 | train_acc 0.6900 | test_loss 0.4890 | test_acc 0.7625 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 58/256 | train_loss 0.5352 | train_acc 0.7080 | test_loss 0.5387 | test_acc 0.7400 | lr 0.0061
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 59/256 | train_loss 0.5434 | train_acc 0.6900 | test_loss 0.5236 | test_acc 0.7470 | lr 0.0047
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 60/256 | train_loss 0.5342 | train_acc 0.7100 | test_loss 0.5792 | test_acc 0.7160 | lr 0.0034
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 61/256 | train_loss 0.5396 | train_acc 0.7120 | test_loss 0.5345 | test_acc 0.7475 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 62/256 | train_loss 0.5090 | train_acc 0.7580 | test_loss 0.5301 | test_acc 0.7460 | lr 0.0016
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 63/256 | train_loss 0.4896 | train_acc 0.7600 | test_loss 0.5246 | test_acc 0.7545 | lr 0.0010
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 64/256 | train_loss 0.5142 | train_acc 0.7580 | test_loss 0.5182 | test_acc 0.7585 | lr 0.0006
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 65/256 | train_loss 0.6266 | train_acc 0.6880 | test_loss 0.5901 | test_acc 0.6770 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 66/256 | train_loss 0.5928 | train_acc 0.7260 | test_loss 0.6617 | test_acc 0.6835 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 67/256 | train_loss 0.6298 | train_acc 0.6860 | test_loss 0.9107 | test_acc 0.5850 | lr 0.0499
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 68/256 | train_loss 0.6760 | train_acc 0.6480 | test_loss 0.5456 | test_acc 0.7265 | lr 0.0497
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 69/256 | train_loss 0.6424 | train_acc 0.6920 | test_loss 0.5623 | test_acc 0.7030 | lr 0.0495
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 70/256 | train_loss 0.5747 | train_acc 0.7120 | test_loss 0.5168 | test_acc 0.7415 | lr 0.0493
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 71/256 | train_loss 0.6127 | train_acc 0.6900 | test_loss 0.5460 | test_acc 0.7230 | lr 0.0489
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 72/256 | train_loss 0.6304 | train_acc 0.6820 | test_loss 0.5992 | test_acc 0.6810 | lr 0.0486
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 73/256 | train_loss 0.6295 | train_acc 0.7180 | test_loss 0.5117 | test_acc 0.7455 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 74/256 | train_loss 0.6134 | train_acc 0.7120 | test_loss 0.6992 | test_acc 0.6495 | lr 0.0476
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 75/256 | train_loss 0.5798 | train_acc 0.7300 | test_loss 0.6236 | test_acc 0.6800 | lr 0.0471
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 76/256 | train_loss 0.5897 | train_acc 0.7260 | test_loss 0.5499 | test_acc 0.7115 | lr 0.0465
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 77/256 | train_loss 0.5516 | train_acc 0.7120 | test_loss 0.5192 | test_acc 0.7450 | lr 0.0458
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 78/256 | train_loss 0.5906 | train_acc 0.7160 | test_loss 0.5796 | test_acc 0.7110 | lr 0.0451
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 79/256 | train_loss 0.5388 | train_acc 0.7440 | test_loss 0.4983 | test_acc 0.7735 | lr 0.0444
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 80/256 | train_loss 0.5630 | train_acc 0.7160 | test_loss 0.5883 | test_acc 0.7040 | lr 0.0436
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 81/256 | train_loss 0.5529 | train_acc 0.7260 | test_loss 0.5665 | test_acc 0.7185 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 82/256 | train_loss 0.5764 | train_acc 0.7440 | test_loss 0.7171 | test_acc 0.6335 | lr 0.0419
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 83/256 | train_loss 0.5756 | train_acc 0.6900 | test_loss 0.6105 | test_acc 0.6950 | lr 0.0410
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 84/256 | train_loss 0.5696 | train_acc 0.6900 | test_loss 0.4878 | test_acc 0.7625 | lr 0.0400
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 85/256 | train_loss 0.5687 | train_acc 0.7100 | test_loss 0.5353 | test_acc 0.7385 | lr 0.0390
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 86/256 | train_loss 0.5567 | train_acc 0.7220 | test_loss 0.4793 | test_acc 0.7775 | lr 0.0380
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 87/256 | train_loss 0.5241 | train_acc 0.7540 | test_loss 0.4985 | test_acc 0.7770 | lr 0.0369
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 88/256 | train_loss 0.5811 | train_acc 0.7240 | test_loss 0.5422 | test_acc 0.7375 | lr 0.0358
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 89/256 | train_loss 0.5637 | train_acc 0.7060 | test_loss 0.5711 | test_acc 0.7065 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 90/256 | train_loss 0.5386 | train_acc 0.7400 | test_loss 0.5150 | test_acc 0.7565 | lr 0.0336
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 91/256 | train_loss 0.5930 | train_acc 0.6920 | test_loss 0.5583 | test_acc 0.7270 | lr 0.0324
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 92/256 | train_loss 0.5667 | train_acc 0.7180 | test_loss 0.4947 | test_acc 0.7755 | lr 0.0313
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 93/256 | train_loss 0.5378 | train_acc 0.7420 | test_loss 0.4592 | test_acc 0.7925 | lr 0.0301
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 94/256 | train_loss 0.4863 | train_acc 0.7660 | test_loss 0.5193 | test_acc 0.7580 | lr 0.0289
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 95/256 | train_loss 0.5233 | train_acc 0.7560 | test_loss 0.4641 | test_acc 0.7835 | lr 0.0277
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 96/256 | train_loss 0.4979 | train_acc 0.7540 | test_loss 0.5008 | test_acc 0.7675 | lr 0.0265
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 97/256 | train_loss 0.5389 | train_acc 0.7200 | test_loss 0.6983 | test_acc 0.6745 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 98/256 | train_loss 0.5060 | train_acc 0.7680 | test_loss 0.5091 | test_acc 0.7650 | lr 0.0240
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 99/256 | train_loss 0.4945 | train_acc 0.7780 | test_loss 0.5885 | test_acc 0.7360 | lr 0.0228
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 100/256 | train_loss 0.5149 | train_acc 0.7480 | test_loss 0.4602 | test_acc 0.7890 | lr 0.0216
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 101/256 | train_loss 0.5237 | train_acc 0.7740 | test_loss 0.4646 | test_acc 0.7865 | lr 0.0204
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 102/256 | train_loss 0.5223 | train_acc 0.7580 | test_loss 0.4746 | test_acc 0.7835 | lr 0.0192
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 103/256 | train_loss 0.4972 | train_acc 0.7680 | test_loss 0.5050 | test_acc 0.7605 | lr 0.0181
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 104/256 | train_loss 0.5030 | train_acc 0.7800 | test_loss 0.4842 | test_acc 0.7645 | lr 0.0169
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 105/256 | train_loss 0.4863 | train_acc 0.8000 | test_loss 0.4688 | test_acc 0.7860 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 106/256 | train_loss 0.5452 | train_acc 0.7340 | test_loss 0.5322 | test_acc 0.7595 | lr 0.0147
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 107/256 | train_loss 0.5384 | train_acc 0.7480 | test_loss 0.5286 | test_acc 0.7605 | lr 0.0136
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 108/256 | train_loss 0.5487 | train_acc 0.7240 | test_loss 0.5409 | test_acc 0.7520 | lr 0.0125
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 109/256 | train_loss 0.5328 | train_acc 0.7380 | test_loss 0.4898 | test_acc 0.7715 | lr 0.0115
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 110/256 | train_loss 0.5117 | train_acc 0.7420 | test_loss 0.4481 | test_acc 0.7985 | lr 0.0105
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 111/256 | train_loss 0.5115 | train_acc 0.7500 | test_loss 0.4666 | test_acc 0.7880 | lr 0.0095
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 112/256 | train_loss 0.5513 | train_acc 0.7280 | test_loss 0.4462 | test_acc 0.8065 | lr 0.0086
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 113/256 | train_loss 0.4882 | train_acc 0.7580 | test_loss 0.4621 | test_acc 0.7875 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 114/256 | train_loss 0.4322 | train_acc 0.8120 | test_loss 0.4758 | test_acc 0.7815 | lr 0.0069
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 115/256 | train_loss 0.5121 | train_acc 0.7560 | test_loss 0.4642 | test_acc 0.7915 | lr 0.0061
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 116/256 | train_loss 0.5120 | train_acc 0.7560 | test_loss 0.4754 | test_acc 0.7895 | lr 0.0054
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 117/256 | train_loss 0.5391 | train_acc 0.7460 | test_loss 0.4732 | test_acc 0.7885 | lr 0.0047
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 118/256 | train_loss 0.4575 | train_acc 0.7860 | test_loss 0.4463 | test_acc 0.7955 | lr 0.0040
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 119/256 | train_loss 0.4608 | train_acc 0.7580 | test_loss 0.4617 | test_acc 0.7885 | lr 0.0034
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 120/256 | train_loss 0.5221 | train_acc 0.7440 | test_loss 0.4496 | test_acc 0.8010 | lr 0.0029
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 121/256 | train_loss 0.4853 | train_acc 0.7780 | test_loss 0.4769 | test_acc 0.7830 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 122/256 | train_loss 0.4860 | train_acc 0.7660 | test_loss 0.4877 | test_acc 0.7795 | lr 0.0019
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 123/256 | train_loss 0.4209 | train_acc 0.7980 | test_loss 0.4835 | test_acc 0.7815 | lr 0.0016
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 124/256 | train_loss 0.4259 | train_acc 0.7800 | test_loss 0.5042 | test_acc 0.7790 | lr 0.0012
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 125/256 | train_loss 0.4748 | train_acc 0.7660 | test_loss 0.4856 | test_acc 0.7850 | lr 0.0010
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 126/256 | train_loss 0.5036 | train_acc 0.7660 | test_loss 0.4789 | test_acc 0.7880 | lr 0.0008
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 127/256 | train_loss 0.4582 | train_acc 0.7840 | test_loss 0.4638 | test_acc 0.7910 | lr 0.0006
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 128/256 | train_loss 0.4955 | train_acc 0.7420 | test_loss 0.4763 | test_acc 0.7880 | lr 0.0005
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 129/256 | train_loss 0.5578 | train_acc 0.7180 | test_loss 0.7024 | test_acc 0.6470 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 130/256 | train_loss 0.5636 | train_acc 0.7200 | test_loss 0.4635 | test_acc 0.7815 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 131/256 | train_loss 0.5213 | train_acc 0.7540 | test_loss 0.5909 | test_acc 0.7420 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 132/256 | train_loss 0.4936 | train_acc 0.7700 | test_loss 0.4919 | test_acc 0.7835 | lr 0.0499
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 133/256 | train_loss 0.5077 | train_acc 0.7460 | test_loss 0.5581 | test_acc 0.7595 | lr 0.0499
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 134/256 | train_loss 0.6070 | train_acc 0.6660 | test_loss 0.4592 | test_acc 0.7910 | lr 0.0498
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 135/256 | train_loss 0.5381 | train_acc 0.7460 | test_loss 0.5125 | test_acc 0.7645 | lr 0.0497
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 136/256 | train_loss 0.5210 | train_acc 0.7620 | test_loss 0.5023 | test_acc 0.7525 | lr 0.0496
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 137/256 | train_loss 0.5547 | train_acc 0.7140 | test_loss 0.6582 | test_acc 0.6710 | lr 0.0495
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 138/256 | train_loss 0.5405 | train_acc 0.7240 | test_loss 0.6899 | test_acc 0.6825 | lr 0.0494
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 139/256 | train_loss 0.5320 | train_acc 0.6940 | test_loss 0.6201 | test_acc 0.7340 | lr 0.0493
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 140/256 | train_loss 0.5636 | train_acc 0.7160 | test_loss 0.6349 | test_acc 0.6790 | lr 0.0491
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 141/256 | train_loss 0.5419 | train_acc 0.7660 | test_loss 0.6417 | test_acc 0.7170 | lr 0.0489
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 142/256 | train_loss 0.5006 | train_acc 0.7680 | test_loss 0.8179 | test_acc 0.6675 | lr 0.0488
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 143/256 | train_loss 0.5907 | train_acc 0.7040 | test_loss 0.4818 | test_acc 0.7730 | lr 0.0486
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 144/256 | train_loss 0.5122 | train_acc 0.7560 | test_loss 0.5344 | test_acc 0.7590 | lr 0.0483
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 145/256 | train_loss 0.5258 | train_acc 0.7380 | test_loss 0.4705 | test_acc 0.7830 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 146/256 | train_loss 0.5862 | train_acc 0.6920 | test_loss 0.5291 | test_acc 0.7450 | lr 0.0479
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 147/256 | train_loss 0.5225 | train_acc 0.7580 | test_loss 0.5073 | test_acc 0.7660 | lr 0.0476
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 148/256 | train_loss 0.5003 | train_acc 0.7660 | test_loss 0.5292 | test_acc 0.7440 | lr 0.0474
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 149/256 | train_loss 0.5219 | train_acc 0.7260 | test_loss 0.5842 | test_acc 0.7195 | lr 0.0471
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 150/256 | train_loss 0.5511 | train_acc 0.7140 | test_loss 0.5597 | test_acc 0.7425 | lr 0.0468
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 151/256 | train_loss 0.5558 | train_acc 0.7480 | test_loss 0.8759 | test_acc 0.5965 | lr 0.0465
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 152/256 | train_loss 0.5394 | train_acc 0.7360 | test_loss 0.4604 | test_acc 0.7905 | lr 0.0462
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 153/256 | train_loss 0.5090 | train_acc 0.7440 | test_loss 0.4486 | test_acc 0.8015 | lr 0.0458
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 154/256 | train_loss 0.5436 | train_acc 0.7340 | test_loss 0.5416 | test_acc 0.7815 | lr 0.0455
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 155/256 | train_loss 0.5244 | train_acc 0.7440 | test_loss 0.4771 | test_acc 0.7840 | lr 0.0451
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 156/256 | train_loss 0.4935 | train_acc 0.7580 | test_loss 0.5315 | test_acc 0.7770 | lr 0.0448
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 157/256 | train_loss 0.5180 | train_acc 0.7480 | test_loss 0.5862 | test_acc 0.7290 | lr 0.0444
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 158/256 | train_loss 0.5391 | train_acc 0.7560 | test_loss 0.6951 | test_acc 0.6710 | lr 0.0440
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 159/256 | train_loss 0.5015 | train_acc 0.7620 | test_loss 0.5606 | test_acc 0.7280 | lr 0.0436
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 160/256 | train_loss 0.4712 | train_acc 0.7640 | test_loss 0.8060 | test_acc 0.6625 | lr 0.0432
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 161/256 | train_loss 0.4894 | train_acc 0.7700 | test_loss 0.5957 | test_acc 0.7280 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 162/256 | train_loss 0.5032 | train_acc 0.7380 | test_loss 0.5793 | test_acc 0.7320 | lr 0.0423
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 163/256 | train_loss 0.4686 | train_acc 0.7780 | test_loss 0.5606 | test_acc 0.7550 | lr 0.0419
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 164/256 | train_loss 0.5129 | train_acc 0.7500 | test_loss 0.4414 | test_acc 0.7985 | lr 0.0414
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 165/256 | train_loss 0.4876 | train_acc 0.7700 | test_loss 0.5983 | test_acc 0.7355 | lr 0.0410
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 166/256 | train_loss 0.4905 | train_acc 0.7380 | test_loss 0.4467 | test_acc 0.8000 | lr 0.0405
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 167/256 | train_loss 0.5531 | train_acc 0.7280 | test_loss 0.4445 | test_acc 0.7985 | lr 0.0400
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 168/256 | train_loss 0.5004 | train_acc 0.7660 | test_loss 0.5630 | test_acc 0.7555 | lr 0.0395
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 169/256 | train_loss 0.5137 | train_acc 0.7140 | test_loss 0.4731 | test_acc 0.7800 | lr 0.0390
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 170/256 | train_loss 0.5017 | train_acc 0.7400 | test_loss 0.7692 | test_acc 0.6705 | lr 0.0385
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 171/256 | train_loss 0.5030 | train_acc 0.7380 | test_loss 0.6304 | test_acc 0.7130 | lr 0.0380
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 172/256 | train_loss 0.4731 | train_acc 0.7800 | test_loss 0.4735 | test_acc 0.7950 | lr 0.0374
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 173/256 | train_loss 0.4572 | train_acc 0.8160 | test_loss 0.8802 | test_acc 0.6475 | lr 0.0369
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 174/256 | train_loss 0.4896 | train_acc 0.7460 | test_loss 0.5012 | test_acc 0.7700 | lr 0.0364
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 175/256 | train_loss 0.5035 | train_acc 0.7020 | test_loss 0.5204 | test_acc 0.7660 | lr 0.0358
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 176/256 | train_loss 0.4967 | train_acc 0.7740 | test_loss 0.4640 | test_acc 0.7815 | lr 0.0353
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 177/256 | train_loss 0.5292 | train_acc 0.7240 | test_loss 0.5469 | test_acc 0.7455 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 178/256 | train_loss 0.4996 | train_acc 0.7740 | test_loss 0.4773 | test_acc 0.7865 | lr 0.0342
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 179/256 | train_loss 0.4656 | train_acc 0.7840 | test_loss 0.5491 | test_acc 0.7605 | lr 0.0336
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 180/256 | train_loss 0.5050 | train_acc 0.7700 | test_loss 0.4643 | test_acc 0.7905 | lr 0.0330
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 181/256 | train_loss 0.4992 | train_acc 0.7860 | test_loss 0.5431 | test_acc 0.7515 | lr 0.0324
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 182/256 | train_loss 0.5130 | train_acc 0.7480 | test_loss 0.6060 | test_acc 0.7130 | lr 0.0319
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 183/256 | train_loss 0.4386 | train_acc 0.8120 | test_loss 0.5227 | test_acc 0.7660 | lr 0.0313
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 184/256 | train_loss 0.4944 | train_acc 0.7680 | test_loss 0.5840 | test_acc 0.7310 | lr 0.0307
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 185/256 | train_loss 0.4723 | train_acc 0.7880 | test_loss 0.4317 | test_acc 0.7985 | lr 0.0301
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 186/256 | train_loss 0.5092 | train_acc 0.7720 | test_loss 0.4418 | test_acc 0.7985 | lr 0.0295
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 187/256 | train_loss 0.5332 | train_acc 0.7200 | test_loss 0.6660 | test_acc 0.6935 | lr 0.0289
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 188/256 | train_loss 0.4710 | train_acc 0.7980 | test_loss 0.4496 | test_acc 0.7995 | lr 0.0283
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 189/256 | train_loss 0.4637 | train_acc 0.7600 | test_loss 0.5012 | test_acc 0.7870 | lr 0.0277
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 190/256 | train_loss 0.5121 | train_acc 0.7660 | test_loss 0.4785 | test_acc 0.7880 | lr 0.0271
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 191/256 | train_loss 0.4998 | train_acc 0.7400 | test_loss 0.5102 | test_acc 0.7850 | lr 0.0265
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 192/256 | train_loss 0.4817 | train_acc 0.7800 | test_loss 0.5945 | test_acc 0.7265 | lr 0.0259
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 193/256 | train_loss 0.4601 | train_acc 0.7820 | test_loss 0.4594 | test_acc 0.7870 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 194/256 | train_loss 0.4905 | train_acc 0.7720 | test_loss 0.5077 | test_acc 0.7670 | lr 0.0246
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 195/256 | train_loss 0.4458 | train_acc 0.7980 | test_loss 0.5157 | test_acc 0.7685 | lr 0.0240
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 196/256 | train_loss 0.4737 | train_acc 0.7720 | test_loss 0.5130 | test_acc 0.7785 | lr 0.0234
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 197/256 | train_loss 0.4121 | train_acc 0.7980 | test_loss 0.4839 | test_acc 0.7850 | lr 0.0228
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 198/256 | train_loss 0.4313 | train_acc 0.7960 | test_loss 0.4432 | test_acc 0.8075 | lr 0.0222
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 199/256 | train_loss 0.4633 | train_acc 0.7700 | test_loss 0.4509 | test_acc 0.7990 | lr 0.0216
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 200/256 | train_loss 0.4866 | train_acc 0.7820 | test_loss 0.4596 | test_acc 0.7960 | lr 0.0210
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 201/256 | train_loss 0.4626 | train_acc 0.7540 | test_loss 0.4981 | test_acc 0.7815 | lr 0.0204
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 202/256 | train_loss 0.4434 | train_acc 0.8200 | test_loss 0.5294 | test_acc 0.7675 | lr 0.0198
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 203/256 | train_loss 0.4422 | train_acc 0.7780 | test_loss 0.7186 | test_acc 0.7070 | lr 0.0192
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 204/256 | train_loss 0.3968 | train_acc 0.8020 | test_loss 0.5130 | test_acc 0.7875 | lr 0.0186
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 205/256 | train_loss 0.5227 | train_acc 0.7360 | test_loss 0.4779 | test_acc 0.7870 | lr 0.0181
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 206/256 | train_loss 0.4582 | train_acc 0.8140 | test_loss 0.4268 | test_acc 0.8020 | lr 0.0175
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 207/256 | train_loss 0.4641 | train_acc 0.7840 | test_loss 0.4583 | test_acc 0.7930 | lr 0.0169
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 208/256 | train_loss 0.4456 | train_acc 0.7920 | test_loss 0.4306 | test_acc 0.8085 | lr 0.0163
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 209/256 | train_loss 0.4623 | train_acc 0.7820 | test_loss 0.4484 | test_acc 0.7955 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 210/256 | train_loss 0.4050 | train_acc 0.7800 | test_loss 0.4576 | test_acc 0.8005 | lr 0.0152
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 211/256 | train_loss 0.3974 | train_acc 0.8300 | test_loss 0.5866 | test_acc 0.7740 | lr 0.0147
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 212/256 | train_loss 0.4403 | train_acc 0.7960 | test_loss 0.4868 | test_acc 0.7920 | lr 0.0141
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 213/256 | train_loss 0.4859 | train_acc 0.7900 | test_loss 0.4430 | test_acc 0.8050 | lr 0.0136
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 214/256 | train_loss 0.4999 | train_acc 0.7920 | test_loss 0.4069 | test_acc 0.8215 | lr 0.0131
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 215/256 | train_loss 0.4130 | train_acc 0.8360 | test_loss 0.4516 | test_acc 0.8025 | lr 0.0125
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 216/256 | train_loss 0.3923 | train_acc 0.8300 | test_loss 0.4622 | test_acc 0.8050 | lr 0.0120
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 217/256 | train_loss 0.4181 | train_acc 0.8040 | test_loss 0.5338 | test_acc 0.7755 | lr 0.0115
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 218/256 | train_loss 0.4435 | train_acc 0.8140 | test_loss 0.5240 | test_acc 0.7765 | lr 0.0110
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 219/256 | train_loss 0.3607 | train_acc 0.8400 | test_loss 0.5089 | test_acc 0.7915 | lr 0.0105
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 220/256 | train_loss 0.4287 | train_acc 0.8140 | test_loss 0.5159 | test_acc 0.8000 | lr 0.0100
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 221/256 | train_loss 0.4146 | train_acc 0.7840 | test_loss 0.4699 | test_acc 0.8020 | lr 0.0095
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 222/256 | train_loss 0.4859 | train_acc 0.7700 | test_loss 0.4284 | test_acc 0.8155 | lr 0.0091
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 223/256 | train_loss 0.3815 | train_acc 0.8500 | test_loss 0.4290 | test_acc 0.8170 | lr 0.0086
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 224/256 | train_loss 0.4408 | train_acc 0.8100 | test_loss 0.4667 | test_acc 0.8055 | lr 0.0082
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 225/256 | train_loss 0.4772 | train_acc 0.7840 | test_loss 0.5891 | test_acc 0.7580 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 226/256 | train_loss 0.4245 | train_acc 0.8120 | test_loss 0.4578 | test_acc 0.8080 | lr 0.0073
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 227/256 | train_loss 0.3954 | train_acc 0.8180 | test_loss 0.4634 | test_acc 0.8035 | lr 0.0069
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 228/256 | train_loss 0.4191 | train_acc 0.8040 | test_loss 0.4375 | test_acc 0.8145 | lr 0.0065
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 229/256 | train_loss 0.4630 | train_acc 0.7620 | test_loss 0.4936 | test_acc 0.7940 | lr 0.0061
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 230/256 | train_loss 0.3961 | train_acc 0.8200 | test_loss 0.4508 | test_acc 0.8050 | lr 0.0057
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 231/256 | train_loss 0.4269 | train_acc 0.8140 | test_loss 0.4504 | test_acc 0.8090 | lr 0.0054
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 232/256 | train_loss 0.3941 | train_acc 0.8500 | test_loss 0.4919 | test_acc 0.7950 | lr 0.0050
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 233/256 | train_loss 0.4371 | train_acc 0.8340 | test_loss 0.4518 | test_acc 0.8145 | lr 0.0047
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 234/256 | train_loss 0.4555 | train_acc 0.8020 | test_loss 0.4533 | test_acc 0.8130 | lr 0.0043
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 235/256 | train_loss 0.3876 | train_acc 0.8240 | test_loss 0.4553 | test_acc 0.8090 | lr 0.0040
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 236/256 | train_loss 0.3279 | train_acc 0.8320 | test_loss 0.4574 | test_acc 0.8095 | lr 0.0037
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 237/256 | train_loss 0.3988 | train_acc 0.8300 | test_loss 0.4596 | test_acc 0.8080 | lr 0.0034
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 238/256 | train_loss 0.4540 | train_acc 0.7600 | test_loss 0.4588 | test_acc 0.8065 | lr 0.0031
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 239/256 | train_loss 0.4472 | train_acc 0.8300 | test_loss 0.4568 | test_acc 0.8065 | lr 0.0029
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 240/256 | train_loss 0.3632 | train_acc 0.8500 | test_loss 0.4727 | test_acc 0.8090 | lr 0.0026
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 241/256 | train_loss 0.4245 | train_acc 0.8280 | test_loss 0.4576 | test_acc 0.8060 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 242/256 | train_loss 0.4081 | train_acc 0.8260 | test_loss 0.4722 | test_acc 0.8005 | lr 0.0022
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 243/256 | train_loss 0.3336 | train_acc 0.8700 | test_loss 0.4492 | test_acc 0.8125 | lr 0.0019
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 244/256 | train_loss 0.3320 | train_acc 0.8680 | test_loss 0.4671 | test_acc 0.8105 | lr 0.0017
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 245/256 | train_loss 0.4296 | train_acc 0.8240 | test_loss 0.4487 | test_acc 0.8145 | lr 0.0016
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 246/256 | train_loss 0.4754 | train_acc 0.7840 | test_loss 0.4462 | test_acc 0.8105 | lr 0.0014
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 247/256 | train_loss 0.3700 | train_acc 0.8480 | test_loss 0.4539 | test_acc 0.8105 | lr 0.0012
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 248/256 | train_loss 0.4414 | train_acc 0.7740 | test_loss 0.4404 | test_acc 0.8140 | lr 0.0011
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 249/256 | train_loss 0.4056 | train_acc 0.8100 | test_loss 0.4499 | test_acc 0.8100 | lr 0.0010
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 250/256 | train_loss 0.4631 | train_acc 0.7840 | test_loss 0.4425 | test_acc 0.8130 | lr 0.0009
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 251/256 | train_loss 0.3365 | train_acc 0.8540 | test_loss 0.4439 | test_acc 0.8155 | lr 0.0008
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 252/256 | train_loss 0.3905 | train_acc 0.8200 | test_loss 0.4432 | test_acc 0.8160 | lr 0.0007
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 253/256 | train_loss 0.4363 | train_acc 0.8120 | test_loss 0.4526 | test_acc 0.8120 | lr 0.0006
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 254/256 | train_loss 0.3808 | train_acc 0.8320 | test_loss 0.4339 | test_acc 0.8190 | lr 0.0006
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 255/256 | train_loss 0.3940 | train_acc 0.8360 | test_loss 0.4419 | test_acc 0.8165 | lr 0.0005
+[INFO] rainbow_memory.py:184 > Task 0 | Epoch 256/256 | train_loss 0.3345 | train_acc 0.8760 | test_loss 0.4494 | test_acc 0.8130 | lr 0.0005
+[INFO] finetune.py:157 > Apply after_task
+[WARNING] finetune.py:230 > Already updated the memory during this iter (0)
+[INFO] main.py:398 > [2-4] Update the information for the current task
+[INFO] finetune.py:157 > Apply after_task
+[WARNING] finetune.py:230 > Already updated the memory during this iter (0)
+[INFO] main.py:405 > [2-5] Report task result
+[INFO] main.py:316 > [2-1] Prepare a datalist for the current task[[INFO] main.py:349 > [2-2] Set environment for the current task
+[INFO] finetune.py:104 > Apply before_task
+[INFO] finetune.py:146 > Reset the optimizer and scheduler states
+[INFO] finetune.py:152 > Increasing the head of fc 10 -> 10
+[INFO] main.py:357 > [2-3] Start to train under online
+[INFO] main.py:372 > Train over streamed data once
+[INFO] rainbow_memory.py:120 > Streamed samples: 800
+[INFO] rainbow_memory.py:121 > In-memory samples: 500
+[INFO] rainbow_memory.py:122 > Pseudo samples: 9984
+[INFO] rainbow_memory.py:128 > Train samples: 11284
+[INFO] rainbow_memory.py:129 > Test samples: 4000
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 1/1 | train_loss 0.6604 | train_acc 0.6353 | test_loss 4.8949 | test_acc 0.4350 | lr 0.0050
+[INFO] finetune.py:169 > Update memory over 10 classes by uncertainty
+[INFO] finetune.py:679 > Compute uncertainty by vr_randaug!
+[WARNING] finetune.py:639 > Fill the unused slots by breaking the equilibrium.
+[INFO] finetune.py:223 > Memory statistic
+[INFO] finetune.py:225 > 
+bird          147
+automobile    139
+deer          120
+dog            94
+Name: klass, dtype: int64
+[INFO] main.py:388 > Train over memory
+[INFO] rainbow_memory.py:120 > Streamed samples: 0
+[INFO] rainbow_memory.py:121 > In-memory samples: 500
+[INFO] rainbow_memory.py:122 > Pseudo samples: 0
+[INFO] rainbow_memory.py:128 > Train samples: 500
+[INFO] rainbow_memory.py:129 > Test samples: 4000
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 1/256 | train_loss 2.0410 | train_acc 0.3840 | test_loss 1.3854 | test_acc 0.3972 | lr 0.0050
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 2/256 | train_loss 1.3773 | train_acc 0.4380 | test_loss 1.2926 | test_acc 0.4733 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 3/256 | train_loss 1.2223 | train_acc 0.4420 | test_loss 1.1861 | test_acc 0.4915 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 4/256 | train_loss 1.2592 | train_acc 0.4600 | test_loss 1.0545 | test_acc 0.5435 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 5/256 | train_loss 1.2294 | train_acc 0.4120 | test_loss 1.1075 | test_acc 0.5072 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 6/256 | train_loss 1.1683 | train_acc 0.4720 | test_loss 1.0012 | test_acc 0.5400 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 7/256 | train_loss 1.0733 | train_acc 0.5260 | test_loss 1.1872 | test_acc 0.4632 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 8/256 | train_loss 1.1004 | train_acc 0.5160 | test_loss 1.0067 | test_acc 0.5675 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 9/256 | train_loss 1.1833 | train_acc 0.4900 | test_loss 1.1561 | test_acc 0.4995 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 10/256 | train_loss 1.0874 | train_acc 0.5340 | test_loss 1.0762 | test_acc 0.5515 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 11/256 | train_loss 1.1261 | train_acc 0.4920 | test_loss 1.0418 | test_acc 0.4943 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 12/256 | train_loss 1.1264 | train_acc 0.5080 | test_loss 1.0849 | test_acc 0.4928 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 13/256 | train_loss 1.0252 | train_acc 0.5220 | test_loss 1.0552 | test_acc 0.5450 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 14/256 | train_loss 1.0432 | train_acc 0.5700 | test_loss 1.0573 | test_acc 0.5523 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 15/256 | train_loss 0.9808 | train_acc 0.6000 | test_loss 1.0192 | test_acc 0.5685 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 16/256 | train_loss 0.9842 | train_acc 0.5600 | test_loss 1.0230 | test_acc 0.5723 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 17/256 | train_loss 1.0586 | train_acc 0.5260 | test_loss 0.9637 | test_acc 0.5988 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 18/256 | train_loss 1.0826 | train_acc 0.5240 | test_loss 1.1663 | test_acc 0.5275 | lr 0.0495
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 19/256 | train_loss 1.2396 | train_acc 0.4000 | test_loss 1.0811 | test_acc 0.5320 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 20/256 | train_loss 1.0363 | train_acc 0.5460 | test_loss 1.2613 | test_acc 0.4885 | lr 0.0458
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 21/256 | train_loss 1.1104 | train_acc 0.4960 | test_loss 0.9709 | test_acc 0.5873 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 22/256 | train_loss 0.9856 | train_acc 0.5880 | test_loss 0.9596 | test_acc 0.5982 | lr 0.0390
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 23/256 | train_loss 1.0396 | train_acc 0.5220 | test_loss 0.8891 | test_acc 0.6232 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 24/256 | train_loss 0.9769 | train_acc 0.5320 | test_loss 1.1803 | test_acc 0.4838 | lr 0.0301
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 25/256 | train_loss 1.0363 | train_acc 0.5780 | test_loss 1.0522 | test_acc 0.5695 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 26/256 | train_loss 1.0895 | train_acc 0.5220 | test_loss 0.9970 | test_acc 0.5833 | lr 0.0204
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 27/256 | train_loss 1.0604 | train_acc 0.5360 | test_loss 1.0521 | test_acc 0.5510 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 28/256 | train_loss 0.9478 | train_acc 0.6200 | test_loss 0.9367 | test_acc 0.6095 | lr 0.0115
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 29/256 | train_loss 0.9681 | train_acc 0.5680 | test_loss 0.9113 | test_acc 0.6172 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 30/256 | train_loss 0.9237 | train_acc 0.6020 | test_loss 0.9336 | test_acc 0.6135 | lr 0.0047
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 31/256 | train_loss 1.0437 | train_acc 0.5860 | test_loss 0.9158 | test_acc 0.6112 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 32/256 | train_loss 0.8697 | train_acc 0.6580 | test_loss 0.9235 | test_acc 0.6128 | lr 0.0010
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 33/256 | train_loss 0.9215 | train_acc 0.6160 | test_loss 1.0457 | test_acc 0.5803 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 34/256 | train_loss 1.0225 | train_acc 0.5240 | test_loss 0.9814 | test_acc 0.5843 | lr 0.0499
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 35/256 | train_loss 1.0794 | train_acc 0.5520 | test_loss 1.2515 | test_acc 0.4915 | lr 0.0495
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 36/256 | train_loss 1.0565 | train_acc 0.5440 | test_loss 0.9976 | test_acc 0.5705 | lr 0.0489
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 37/256 | train_loss 1.0332 | train_acc 0.5300 | test_loss 1.2531 | test_acc 0.4577 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 38/256 | train_loss 1.0077 | train_acc 0.5800 | test_loss 1.0638 | test_acc 0.5633 | lr 0.0471
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 39/256 | train_loss 1.0417 | train_acc 0.5740 | test_loss 0.9937 | test_acc 0.5870 | lr 0.0458
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 40/256 | train_loss 1.0638 | train_acc 0.5400 | test_loss 1.0141 | test_acc 0.5982 | lr 0.0444
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 41/256 | train_loss 0.9250 | train_acc 0.6140 | test_loss 1.0410 | test_acc 0.5577 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 42/256 | train_loss 0.9356 | train_acc 0.5720 | test_loss 1.1659 | test_acc 0.5380 | lr 0.0410
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 43/256 | train_loss 0.9961 | train_acc 0.5780 | test_loss 0.9354 | test_acc 0.5840 | lr 0.0390
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 44/256 | train_loss 0.9037 | train_acc 0.6120 | test_loss 0.9677 | test_acc 0.5830 | lr 0.0369
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 45/256 | train_loss 0.9718 | train_acc 0.6160 | test_loss 0.8558 | test_acc 0.6395 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 46/256 | train_loss 1.0096 | train_acc 0.5880 | test_loss 1.2974 | test_acc 0.4395 | lr 0.0324
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 47/256 | train_loss 1.0248 | train_acc 0.5600 | test_loss 0.9178 | test_acc 0.6055 | lr 0.0301
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 48/256 | train_loss 1.0136 | train_acc 0.5620 | test_loss 0.9301 | test_acc 0.6135 | lr 0.0277
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 49/256 | train_loss 0.9337 | train_acc 0.6240 | test_loss 0.8774 | test_acc 0.6422 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 50/256 | train_loss 0.9598 | train_acc 0.6280 | test_loss 1.0494 | test_acc 0.5463 | lr 0.0228
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 51/256 | train_loss 0.9316 | train_acc 0.6320 | test_loss 0.8833 | test_acc 0.6410 | lr 0.0204
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 52/256 | train_loss 0.8631 | train_acc 0.6780 | test_loss 0.9290 | test_acc 0.6085 | lr 0.0181
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 53/256 | train_loss 0.8376 | train_acc 0.6660 | test_loss 0.8300 | test_acc 0.6518 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 54/256 | train_loss 0.8140 | train_acc 0.6800 | test_loss 0.8518 | test_acc 0.6440 | lr 0.0136
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 55/256 | train_loss 0.8026 | train_acc 0.6900 | test_loss 0.8684 | test_acc 0.6518 | lr 0.0115
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 56/256 | train_loss 0.9052 | train_acc 0.6040 | test_loss 0.9064 | test_acc 0.6340 | lr 0.0095
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 57/256 | train_loss 0.8432 | train_acc 0.6200 | test_loss 0.7957 | test_acc 0.6723 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 58/256 | train_loss 0.9174 | train_acc 0.5920 | test_loss 0.8323 | test_acc 0.6532 | lr 0.0061
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 59/256 | train_loss 0.8984 | train_acc 0.6260 | test_loss 0.8361 | test_acc 0.6575 | lr 0.0047
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 60/256 | train_loss 0.8023 | train_acc 0.6760 | test_loss 0.8179 | test_acc 0.6707 | lr 0.0034
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 61/256 | train_loss 0.8069 | train_acc 0.7040 | test_loss 0.8469 | test_acc 0.6548 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 62/256 | train_loss 0.6648 | train_acc 0.7440 | test_loss 0.8185 | test_acc 0.6680 | lr 0.0016
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 63/256 | train_loss 0.7207 | train_acc 0.6880 | test_loss 0.8213 | test_acc 0.6680 | lr 0.0010
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 64/256 | train_loss 0.7250 | train_acc 0.7180 | test_loss 0.8283 | test_acc 0.6655 | lr 0.0006
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 65/256 | train_loss 0.8403 | train_acc 0.6900 | test_loss 1.1345 | test_acc 0.6175 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 66/256 | train_loss 0.9726 | train_acc 0.6080 | test_loss 1.2381 | test_acc 0.5292 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 67/256 | train_loss 1.0585 | train_acc 0.5600 | test_loss 0.9588 | test_acc 0.5885 | lr 0.0499
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 68/256 | train_loss 1.0419 | train_acc 0.5760 | test_loss 0.9210 | test_acc 0.6195 | lr 0.0497
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 69/256 | train_loss 0.9775 | train_acc 0.6220 | test_loss 0.9576 | test_acc 0.6128 | lr 0.0495
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 70/256 | train_loss 0.9544 | train_acc 0.5860 | test_loss 1.1171 | test_acc 0.5135 | lr 0.0493
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 71/256 | train_loss 0.9920 | train_acc 0.5560 | test_loss 0.9083 | test_acc 0.6212 | lr 0.0489
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 72/256 | train_loss 0.9159 | train_acc 0.6620 | test_loss 0.9236 | test_acc 0.6178 | lr 0.0486
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 73/256 | train_loss 0.9198 | train_acc 0.6240 | test_loss 0.8349 | test_acc 0.6522 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 74/256 | train_loss 0.9133 | train_acc 0.6580 | test_loss 0.7993 | test_acc 0.6657 | lr 0.0476
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 75/256 | train_loss 0.9970 | train_acc 0.5880 | test_loss 0.8924 | test_acc 0.6138 | lr 0.0471
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 76/256 | train_loss 0.9353 | train_acc 0.6180 | test_loss 0.8171 | test_acc 0.6565 | lr 0.0465
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 77/256 | train_loss 0.9130 | train_acc 0.6640 | test_loss 0.7282 | test_acc 0.7005 | lr 0.0458
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 78/256 | train_loss 0.8833 | train_acc 0.6360 | test_loss 1.1720 | test_acc 0.5262 | lr 0.0451
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 79/256 | train_loss 0.8840 | train_acc 0.6740 | test_loss 0.7838 | test_acc 0.6793 | lr 0.0444
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 80/256 | train_loss 1.0132 | train_acc 0.6060 | test_loss 1.1342 | test_acc 0.5475 | lr 0.0436
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 81/256 | train_loss 0.8992 | train_acc 0.6420 | test_loss 0.7833 | test_acc 0.6725 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 82/256 | train_loss 0.7918 | train_acc 0.6900 | test_loss 1.0294 | test_acc 0.6150 | lr 0.0419
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 83/256 | train_loss 0.8966 | train_acc 0.6420 | test_loss 1.0553 | test_acc 0.6175 | lr 0.0410
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 84/256 | train_loss 0.9520 | train_acc 0.5700 | test_loss 0.8639 | test_acc 0.6472 | lr 0.0400
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 85/256 | train_loss 0.9322 | train_acc 0.6360 | test_loss 0.8534 | test_acc 0.6315 | lr 0.0390
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 86/256 | train_loss 0.7844 | train_acc 0.6480 | test_loss 0.9371 | test_acc 0.6340 | lr 0.0380
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 87/256 | train_loss 0.9391 | train_acc 0.6640 | test_loss 1.1194 | test_acc 0.5727 | lr 0.0369
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 88/256 | train_loss 0.8920 | train_acc 0.6600 | test_loss 0.9388 | test_acc 0.6298 | lr 0.0358
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 89/256 | train_loss 0.8590 | train_acc 0.6360 | test_loss 0.7967 | test_acc 0.6767 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 90/256 | train_loss 0.8940 | train_acc 0.7120 | test_loss 1.1705 | test_acc 0.5545 | lr 0.0336
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 91/256 | train_loss 0.9138 | train_acc 0.6580 | test_loss 0.8894 | test_acc 0.6550 | lr 0.0324
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 92/256 | train_loss 0.8950 | train_acc 0.6540 | test_loss 0.7102 | test_acc 0.7157 | lr 0.0313
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 93/256 | train_loss 0.7547 | train_acc 0.6980 | test_loss 1.1039 | test_acc 0.6098 | lr 0.0301
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 94/256 | train_loss 0.7472 | train_acc 0.6940 | test_loss 0.9986 | test_acc 0.6405 | lr 0.0289
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 95/256 | train_loss 0.8008 | train_acc 0.7140 | test_loss 0.7813 | test_acc 0.6835 | lr 0.0277
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 96/256 | train_loss 0.8555 | train_acc 0.6420 | test_loss 0.8899 | test_acc 0.6440 | lr 0.0265
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 97/256 | train_loss 0.8308 | train_acc 0.6760 | test_loss 0.7288 | test_acc 0.7037 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 98/256 | train_loss 0.7330 | train_acc 0.7220 | test_loss 0.7218 | test_acc 0.7125 | lr 0.0240
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 99/256 | train_loss 0.6825 | train_acc 0.7520 | test_loss 0.8186 | test_acc 0.6737 | lr 0.0228
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 100/256 | train_loss 0.6911 | train_acc 0.7200 | test_loss 0.7270 | test_acc 0.7153 | lr 0.0216
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 101/256 | train_loss 0.7360 | train_acc 0.7360 | test_loss 0.7530 | test_acc 0.7030 | lr 0.0204
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 102/256 | train_loss 0.8014 | train_acc 0.7080 | test_loss 1.0418 | test_acc 0.6038 | lr 0.0192
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 103/256 | train_loss 0.7517 | train_acc 0.7340 | test_loss 0.7270 | test_acc 0.7127 | lr 0.0181
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 104/256 | train_loss 0.6848 | train_acc 0.7540 | test_loss 0.7185 | test_acc 0.7157 | lr 0.0169
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 105/256 | train_loss 0.7858 | train_acc 0.7120 | test_loss 0.7717 | test_acc 0.6983 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 106/256 | train_loss 0.7054 | train_acc 0.7140 | test_loss 0.9110 | test_acc 0.6565 | lr 0.0147
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 107/256 | train_loss 0.8994 | train_acc 0.6760 | test_loss 0.8244 | test_acc 0.6785 | lr 0.0136
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 108/256 | train_loss 0.9345 | train_acc 0.6320 | test_loss 0.7513 | test_acc 0.7040 | lr 0.0125
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 109/256 | train_loss 0.7087 | train_acc 0.6820 | test_loss 0.6918 | test_acc 0.7342 | lr 0.0115
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 110/256 | train_loss 0.8009 | train_acc 0.7160 | test_loss 0.7235 | test_acc 0.7300 | lr 0.0105
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 111/256 | train_loss 0.7454 | train_acc 0.7000 | test_loss 0.7584 | test_acc 0.7045 | lr 0.0095
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 112/256 | train_loss 0.7949 | train_acc 0.6760 | test_loss 0.7196 | test_acc 0.7225 | lr 0.0086
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 113/256 | train_loss 0.7093 | train_acc 0.7300 | test_loss 0.7841 | test_acc 0.7007 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 114/256 | train_loss 0.5898 | train_acc 0.7680 | test_loss 0.7910 | test_acc 0.6925 | lr 0.0069
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 115/256 | train_loss 0.7368 | train_acc 0.7360 | test_loss 0.6855 | test_acc 0.7368 | lr 0.0061
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 116/256 | train_loss 0.8062 | train_acc 0.7460 | test_loss 0.6843 | test_acc 0.7345 | lr 0.0054
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 117/256 | train_loss 0.6560 | train_acc 0.7400 | test_loss 0.6772 | test_acc 0.7398 | lr 0.0047
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 118/256 | train_loss 0.5813 | train_acc 0.7840 | test_loss 0.7442 | test_acc 0.7188 | lr 0.0040
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 119/256 | train_loss 0.8452 | train_acc 0.6900 | test_loss 0.7177 | test_acc 0.7275 | lr 0.0034
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 120/256 | train_loss 0.6760 | train_acc 0.7680 | test_loss 0.7065 | test_acc 0.7330 | lr 0.0029
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 121/256 | train_loss 0.7881 | train_acc 0.7120 | test_loss 0.6859 | test_acc 0.7440 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 122/256 | train_loss 0.5338 | train_acc 0.7960 | test_loss 0.6848 | test_acc 0.7408 | lr 0.0019
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 123/256 | train_loss 0.5868 | train_acc 0.7580 | test_loss 0.6858 | test_acc 0.7432 | lr 0.0016
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 124/256 | train_loss 0.6510 | train_acc 0.7180 | test_loss 0.6911 | test_acc 0.7422 | lr 0.0012
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 125/256 | train_loss 0.7099 | train_acc 0.7220 | test_loss 0.6918 | test_acc 0.7405 | lr 0.0010
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 126/256 | train_loss 0.6710 | train_acc 0.7400 | test_loss 0.7003 | test_acc 0.7392 | lr 0.0008
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 127/256 | train_loss 0.6836 | train_acc 0.7480 | test_loss 0.7007 | test_acc 0.7382 | lr 0.0006
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 128/256 | train_loss 0.7989 | train_acc 0.6600 | test_loss 0.6957 | test_acc 0.7408 | lr 0.0005
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 129/256 | train_loss 0.8686 | train_acc 0.6280 | test_loss 1.0672 | test_acc 0.5960 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 130/256 | train_loss 0.7588 | train_acc 0.7240 | test_loss 0.9426 | test_acc 0.6510 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 131/256 | train_loss 0.8345 | train_acc 0.6620 | test_loss 1.2218 | test_acc 0.6055 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 132/256 | train_loss 0.8251 | train_acc 0.7040 | test_loss 0.8785 | test_acc 0.6552 | lr 0.0499
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 133/256 | train_loss 0.7507 | train_acc 0.6760 | test_loss 1.2646 | test_acc 0.5657 | lr 0.0499
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 134/256 | train_loss 0.8297 | train_acc 0.6740 | test_loss 0.8212 | test_acc 0.6693 | lr 0.0498
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 135/256 | train_loss 0.8794 | train_acc 0.6100 | test_loss 0.9991 | test_acc 0.6230 | lr 0.0497
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 136/256 | train_loss 0.7579 | train_acc 0.6520 | test_loss 0.8543 | test_acc 0.6853 | lr 0.0496
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 137/256 | train_loss 0.9377 | train_acc 0.6800 | test_loss 1.0452 | test_acc 0.5850 | lr 0.0495
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 138/256 | train_loss 0.7456 | train_acc 0.7000 | test_loss 0.9981 | test_acc 0.6268 | lr 0.0494
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 139/256 | train_loss 0.9260 | train_acc 0.6380 | test_loss 0.9422 | test_acc 0.6358 | lr 0.0493
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 140/256 | train_loss 0.9118 | train_acc 0.6360 | test_loss 0.7490 | test_acc 0.6985 | lr 0.0491
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 141/256 | train_loss 0.8021 | train_acc 0.7280 | test_loss 0.8530 | test_acc 0.6673 | lr 0.0489
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 142/256 | train_loss 0.9149 | train_acc 0.6400 | test_loss 0.7819 | test_acc 0.6870 | lr 0.0488
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 143/256 | train_loss 0.8390 | train_acc 0.6600 | test_loss 0.9058 | test_acc 0.6310 | lr 0.0486
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 144/256 | train_loss 0.7538 | train_acc 0.7280 | test_loss 0.8413 | test_acc 0.6757 | lr 0.0483
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 145/256 | train_loss 0.9132 | train_acc 0.6520 | test_loss 0.9609 | test_acc 0.6210 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 146/256 | train_loss 0.8123 | train_acc 0.6760 | test_loss 0.7542 | test_acc 0.6917 | lr 0.0479
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 147/256 | train_loss 0.8142 | train_acc 0.6920 | test_loss 0.9720 | test_acc 0.6208 | lr 0.0476
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 148/256 | train_loss 0.9432 | train_acc 0.5860 | test_loss 1.0113 | test_acc 0.5783 | lr 0.0474
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 149/256 | train_loss 0.7427 | train_acc 0.7460 | test_loss 0.7926 | test_acc 0.6833 | lr 0.0471
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 150/256 | train_loss 0.8123 | train_acc 0.6540 | test_loss 1.0063 | test_acc 0.6252 | lr 0.0468
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 151/256 | train_loss 0.9509 | train_acc 0.6500 | test_loss 0.8078 | test_acc 0.6753 | lr 0.0465
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 152/256 | train_loss 0.7426 | train_acc 0.7100 | test_loss 0.7262 | test_acc 0.7160 | lr 0.0462
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 153/256 | train_loss 0.8183 | train_acc 0.7180 | test_loss 0.7384 | test_acc 0.7137 | lr 0.0458
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 154/256 | train_loss 0.8804 | train_acc 0.6260 | test_loss 0.9033 | test_acc 0.6332 | lr 0.0455
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 155/256 | train_loss 0.6140 | train_acc 0.7580 | test_loss 1.0006 | test_acc 0.6548 | lr 0.0451
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 156/256 | train_loss 0.8387 | train_acc 0.6700 | test_loss 0.9773 | test_acc 0.6070 | lr 0.0448
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 157/256 | train_loss 0.6534 | train_acc 0.7740 | test_loss 0.9458 | test_acc 0.6382 | lr 0.0444
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 158/256 | train_loss 0.9819 | train_acc 0.6380 | test_loss 0.7373 | test_acc 0.7023 | lr 0.0440
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 159/256 | train_loss 0.6325 | train_acc 0.7600 | test_loss 0.8418 | test_acc 0.6813 | lr 0.0436
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 160/256 | train_loss 0.7500 | train_acc 0.6900 | test_loss 0.8151 | test_acc 0.6860 | lr 0.0432
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 161/256 | train_loss 0.8167 | train_acc 0.6280 | test_loss 0.9679 | test_acc 0.6370 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 162/256 | train_loss 0.6918 | train_acc 0.7280 | test_loss 1.3286 | test_acc 0.5630 | lr 0.0423
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 163/256 | train_loss 0.7838 | train_acc 0.6760 | test_loss 0.9997 | test_acc 0.6135 | lr 0.0419
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 164/256 | train_loss 0.7090 | train_acc 0.7320 | test_loss 0.6856 | test_acc 0.7270 | lr 0.0414
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 165/256 | train_loss 0.5917 | train_acc 0.8060 | test_loss 0.6554 | test_acc 0.7535 | lr 0.0410
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 166/256 | train_loss 1.0453 | train_acc 0.5660 | test_loss 0.7439 | test_acc 0.7117 | lr 0.0405
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 167/256 | train_loss 0.7042 | train_acc 0.7620 | test_loss 0.7011 | test_acc 0.7245 | lr 0.0400
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 168/256 | train_loss 0.7866 | train_acc 0.6540 | test_loss 0.9120 | test_acc 0.6727 | lr 0.0395
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 169/256 | train_loss 0.7403 | train_acc 0.7240 | test_loss 0.6693 | test_acc 0.7432 | lr 0.0390
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 170/256 | train_loss 0.7863 | train_acc 0.6580 | test_loss 1.1835 | test_acc 0.5810 | lr 0.0385
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 171/256 | train_loss 0.6870 | train_acc 0.7720 | test_loss 0.9180 | test_acc 0.6505 | lr 0.0380
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 172/256 | train_loss 0.5989 | train_acc 0.7880 | test_loss 0.7569 | test_acc 0.7232 | lr 0.0374
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 173/256 | train_loss 0.7063 | train_acc 0.7040 | test_loss 0.8367 | test_acc 0.6927 | lr 0.0369
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 174/256 | train_loss 0.7499 | train_acc 0.7260 | test_loss 0.6540 | test_acc 0.7425 | lr 0.0364
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 175/256 | train_loss 0.7574 | train_acc 0.7000 | test_loss 0.7327 | test_acc 0.7115 | lr 0.0358
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 176/256 | train_loss 0.6537 | train_acc 0.7840 | test_loss 0.7641 | test_acc 0.7065 | lr 0.0353
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 177/256 | train_loss 0.6989 | train_acc 0.7080 | test_loss 0.8791 | test_acc 0.6950 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 178/256 | train_loss 0.6584 | train_acc 0.7960 | test_loss 0.8681 | test_acc 0.6910 | lr 0.0342
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 179/256 | train_loss 0.6465 | train_acc 0.7700 | test_loss 0.7393 | test_acc 0.7125 | lr 0.0336
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 180/256 | train_loss 0.8353 | train_acc 0.6840 | test_loss 0.6986 | test_acc 0.7230 | lr 0.0330
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 181/256 | train_loss 0.5902 | train_acc 0.7860 | test_loss 0.8028 | test_acc 0.6893 | lr 0.0324
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 182/256 | train_loss 0.7622 | train_acc 0.7100 | test_loss 0.7830 | test_acc 0.6943 | lr 0.0319
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 183/256 | train_loss 0.5981 | train_acc 0.8160 | test_loss 0.7866 | test_acc 0.7250 | lr 0.0313
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 184/256 | train_loss 0.7702 | train_acc 0.7360 | test_loss 1.2656 | test_acc 0.6232 | lr 0.0307
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 185/256 | train_loss 0.5622 | train_acc 0.8160 | test_loss 0.7464 | test_acc 0.7177 | lr 0.0301
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 186/256 | train_loss 0.7360 | train_acc 0.7400 | test_loss 0.9740 | test_acc 0.6305 | lr 0.0295
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 187/256 | train_loss 0.6991 | train_acc 0.7820 | test_loss 0.6868 | test_acc 0.7290 | lr 0.0289
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 188/256 | train_loss 0.6410 | train_acc 0.7720 | test_loss 0.6715 | test_acc 0.7515 | lr 0.0283
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 189/256 | train_loss 0.7033 | train_acc 0.7320 | test_loss 0.9011 | test_acc 0.6615 | lr 0.0277
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 190/256 | train_loss 0.5211 | train_acc 0.8220 | test_loss 0.9070 | test_acc 0.6825 | lr 0.0271
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 191/256 | train_loss 0.7417 | train_acc 0.7040 | test_loss 0.7863 | test_acc 0.7110 | lr 0.0265
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 192/256 | train_loss 0.6437 | train_acc 0.7700 | test_loss 0.7571 | test_acc 0.7183 | lr 0.0259
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 193/256 | train_loss 0.6238 | train_acc 0.7940 | test_loss 0.8874 | test_acc 0.6665 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 194/256 | train_loss 0.6067 | train_acc 0.7660 | test_loss 0.9302 | test_acc 0.6655 | lr 0.0246
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 195/256 | train_loss 0.6216 | train_acc 0.7860 | test_loss 0.8948 | test_acc 0.6887 | lr 0.0240
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 196/256 | train_loss 0.6870 | train_acc 0.7600 | test_loss 0.7848 | test_acc 0.6973 | lr 0.0234
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 197/256 | train_loss 0.3535 | train_acc 0.8840 | test_loss 0.6933 | test_acc 0.7585 | lr 0.0228
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 198/256 | train_loss 0.6680 | train_acc 0.7300 | test_loss 0.8586 | test_acc 0.6960 | lr 0.0222
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 199/256 | train_loss 0.6796 | train_acc 0.7480 | test_loss 0.6648 | test_acc 0.7540 | lr 0.0216
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 200/256 | train_loss 0.7085 | train_acc 0.7040 | test_loss 0.9933 | test_acc 0.6108 | lr 0.0210
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 201/256 | train_loss 0.8128 | train_acc 0.6740 | test_loss 0.8234 | test_acc 0.6915 | lr 0.0204
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 202/256 | train_loss 0.4823 | train_acc 0.8340 | test_loss 0.6540 | test_acc 0.7608 | lr 0.0198
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 203/256 | train_loss 0.5806 | train_acc 0.8000 | test_loss 0.6873 | test_acc 0.7530 | lr 0.0192
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 204/256 | train_loss 0.5316 | train_acc 0.8260 | test_loss 0.5746 | test_acc 0.7905 | lr 0.0186
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 205/256 | train_loss 0.7425 | train_acc 0.7460 | test_loss 0.6462 | test_acc 0.7622 | lr 0.0181
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 206/256 | train_loss 0.7542 | train_acc 0.6780 | test_loss 0.6123 | test_acc 0.7650 | lr 0.0175
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 207/256 | train_loss 0.6010 | train_acc 0.7520 | test_loss 0.6675 | test_acc 0.7460 | lr 0.0169
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 208/256 | train_loss 0.4938 | train_acc 0.8460 | test_loss 0.9033 | test_acc 0.6873 | lr 0.0163
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 209/256 | train_loss 0.5350 | train_acc 0.7520 | test_loss 0.6904 | test_acc 0.7428 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 210/256 | train_loss 0.5933 | train_acc 0.7620 | test_loss 0.7584 | test_acc 0.7208 | lr 0.0152
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 211/256 | train_loss 0.4267 | train_acc 0.8720 | test_loss 0.7967 | test_acc 0.7310 | lr 0.0147
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 212/256 | train_loss 0.6622 | train_acc 0.7860 | test_loss 0.7976 | test_acc 0.7100 | lr 0.0141
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 213/256 | train_loss 0.6906 | train_acc 0.7660 | test_loss 0.7370 | test_acc 0.7250 | lr 0.0136
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 214/256 | train_loss 0.7264 | train_acc 0.7580 | test_loss 0.7031 | test_acc 0.7325 | lr 0.0131
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 215/256 | train_loss 0.4441 | train_acc 0.8480 | test_loss 0.5979 | test_acc 0.7805 | lr 0.0125
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 216/256 | train_loss 0.6210 | train_acc 0.8080 | test_loss 0.5902 | test_acc 0.7850 | lr 0.0120
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 217/256 | train_loss 0.5681 | train_acc 0.8320 | test_loss 0.6683 | test_acc 0.7620 | lr 0.0115
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 218/256 | train_loss 0.5392 | train_acc 0.8400 | test_loss 0.5937 | test_acc 0.7775 | lr 0.0110
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 219/256 | train_loss 0.6380 | train_acc 0.8040 | test_loss 0.7528 | test_acc 0.7245 | lr 0.0105
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 220/256 | train_loss 0.6137 | train_acc 0.7820 | test_loss 0.7593 | test_acc 0.7250 | lr 0.0100
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 221/256 | train_loss 0.5633 | train_acc 0.7900 | test_loss 0.6788 | test_acc 0.7420 | lr 0.0095
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 222/256 | train_loss 0.4809 | train_acc 0.8180 | test_loss 0.6245 | test_acc 0.7630 | lr 0.0091
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 223/256 | train_loss 0.4125 | train_acc 0.8960 | test_loss 0.5882 | test_acc 0.7855 | lr 0.0086
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 224/256 | train_loss 0.5992 | train_acc 0.8340 | test_loss 0.7279 | test_acc 0.7340 | lr 0.0082
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 225/256 | train_loss 0.6972 | train_acc 0.7280 | test_loss 0.6346 | test_acc 0.7660 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 226/256 | train_loss 0.6870 | train_acc 0.7260 | test_loss 0.6466 | test_acc 0.7632 | lr 0.0073
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 227/256 | train_loss 0.4687 | train_acc 0.8580 | test_loss 0.6268 | test_acc 0.7680 | lr 0.0069
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 228/256 | train_loss 0.5662 | train_acc 0.7300 | test_loss 0.6906 | test_acc 0.7370 | lr 0.0065
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 229/256 | train_loss 0.4583 | train_acc 0.8800 | test_loss 0.6318 | test_acc 0.7655 | lr 0.0061
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 230/256 | train_loss 0.5678 | train_acc 0.8060 | test_loss 0.6698 | test_acc 0.7492 | lr 0.0057
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 231/256 | train_loss 0.4870 | train_acc 0.8400 | test_loss 0.7029 | test_acc 0.7498 | lr 0.0054
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 232/256 | train_loss 0.5378 | train_acc 0.8740 | test_loss 0.6632 | test_acc 0.7645 | lr 0.0050
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 233/256 | train_loss 0.7826 | train_acc 0.7540 | test_loss 0.6403 | test_acc 0.7658 | lr 0.0047
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 234/256 | train_loss 0.4019 | train_acc 0.8520 | test_loss 0.6232 | test_acc 0.7742 | lr 0.0043
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 235/256 | train_loss 0.4771 | train_acc 0.7900 | test_loss 0.6596 | test_acc 0.7632 | lr 0.0040
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 236/256 | train_loss 0.4294 | train_acc 0.8500 | test_loss 0.6671 | test_acc 0.7605 | lr 0.0037
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 237/256 | train_loss 0.4974 | train_acc 0.8280 | test_loss 0.6555 | test_acc 0.7658 | lr 0.0034
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 238/256 | train_loss 0.6665 | train_acc 0.7260 | test_loss 0.6124 | test_acc 0.7770 | lr 0.0031
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 239/256 | train_loss 0.5047 | train_acc 0.8500 | test_loss 0.5942 | test_acc 0.7812 | lr 0.0029
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 240/256 | train_loss 0.3297 | train_acc 0.9240 | test_loss 0.6071 | test_acc 0.7780 | lr 0.0026
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 241/256 | train_loss 0.6133 | train_acc 0.8320 | test_loss 0.6436 | test_acc 0.7692 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 242/256 | train_loss 0.4422 | train_acc 0.8540 | test_loss 0.6240 | test_acc 0.7752 | lr 0.0022
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 243/256 | train_loss 0.2772 | train_acc 0.9460 | test_loss 0.6319 | test_acc 0.7720 | lr 0.0019
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 244/256 | train_loss 0.4891 | train_acc 0.8780 | test_loss 0.6455 | test_acc 0.7645 | lr 0.0017
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 245/256 | train_loss 0.5615 | train_acc 0.8020 | test_loss 0.6453 | test_acc 0.7688 | lr 0.0016
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 246/256 | train_loss 0.6043 | train_acc 0.7500 | test_loss 0.6493 | test_acc 0.7630 | lr 0.0014
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 247/256 | train_loss 0.4627 | train_acc 0.8520 | test_loss 0.6079 | test_acc 0.7745 | lr 0.0012
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 248/256 | train_loss 0.5833 | train_acc 0.8240 | test_loss 0.6264 | test_acc 0.7708 | lr 0.0011
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 249/256 | train_loss 0.5132 | train_acc 0.7800 | test_loss 0.6294 | test_acc 0.7702 | lr 0.0010
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 250/256 | train_loss 0.4359 | train_acc 0.8400 | test_loss 0.6197 | test_acc 0.7725 | lr 0.0009
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 251/256 | train_loss 0.4463 | train_acc 0.8540 | test_loss 0.6252 | test_acc 0.7698 | lr 0.0008
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 252/256 | train_loss 0.6380 | train_acc 0.7960 | test_loss 0.6166 | test_acc 0.7715 | lr 0.0007
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 253/256 | train_loss 0.4114 | train_acc 0.8760 | test_loss 0.6295 | test_acc 0.7675 | lr 0.0006
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 254/256 | train_loss 0.5102 | train_acc 0.8600 | test_loss 0.6292 | test_acc 0.7672 | lr 0.0006
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 255/256 | train_loss 0.4601 | train_acc 0.8540 | test_loss 0.6304 | test_acc 0.7682 | lr 0.0005
+[INFO] rainbow_memory.py:184 > Task 1 | Epoch 256/256 | train_loss 0.3051 | train_acc 0.9100 | test_loss 0.6311 | test_acc 0.7718 | lr 0.0005
+[INFO] finetune.py:157 > Apply after_task
+[WARNING] finetune.py:230 > Already updated the memory during this iter (1)
+[INFO] main.py:398 > [2-4] Update the information for the current task
+[INFO] finetune.py:157 > Apply after_task
+[WARNING] finetune.py:230 > Already updated the memory during this iter (1)
+[INFO] main.py:405 > [2-5] Report task result
+[INFO] main.py:316 > [2-1] Prepare a datalist for the current task
+[INFO] main.py:349 > [2-2] Set environment for the current task
+[INFO] finetune.py:104 > Apply before_task
+[INFO] finetune.py:146 > Reset the optimizer and scheduler states
+[INFO] finetune.py:152 > Increasing the head of fc 10 -> 10
+[INFO] main.py:357 > [2-3] Start to train under online
+[INFO] main.py:372 > Train over streamed data once
+[INFO] rainbow_memory.py:120 > Streamed samples: 800
+[INFO] rainbow_memory.py:121 > In-memory samples: 500
+[INFO] rainbow_memory.py:122 > Pseudo samples: 9984
+[INFO] rainbow_memory.py:128 > Train samples: 11284
+[INFO] rainbow_memory.py:129 > Test samples: 6000
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 1/1 | train_loss 0.5122 | train_acc 0.7578 | test_loss 5.6114 | test_acc 0.3060 | lr 0.0050
+[INFO] finetune.py:169 > Update memory over 10 classes by uncertainty
+[INFO] finetune.py:679 > Compute uncertainty by vr_randaug!
+[WARNING] finetune.py:639 > Fill the unused slots by breaking the equilibrium.
+[INFO] finetune.py:223 > Memory statistic
+[INFO] finetune.py:225 > 
+frog          120
+truck         118
+bird           70
+automobile     66
+deer           64
+dog            62
+Name: klass, dtype: int64
+[INFO] main.py:388 > Train over memory
+[INFO] rainbow_memory.py:120 > Streamed samples: 0
+[INFO] rainbow_memory.py:121 > In-memory samples: 500
+[INFO] rainbow_memory.py:122 > Pseudo samples: 0
+[INFO] rainbow_memory.py:128 > Train samples: 500
+[INFO] rainbow_memory.py:129 > Test samples: 6000
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 1/256 | train_loss 2.5571 | train_acc 0.4160 | test_loss 1.5030 | test_acc 0.3315 | lr 0.0050
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 2/256 | train_loss 2.1535 | train_acc 0.3820 | test_loss 3.2631 | test_acc 0.3497 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 3/256 | train_loss 1.7566 | train_acc 0.3940 | test_loss 1.2819 | test_acc 0.5160 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 4/256 | train_loss 1.2963 | train_acc 0.5340 | test_loss 1.3874 | test_acc 0.4287 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 5/256 | train_loss 1.2165 | train_acc 0.5480 | test_loss 1.2167 | test_acc 0.5253 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 6/256 | train_loss 1.2239 | train_acc 0.5640 | test_loss 1.2313 | test_acc 0.5267 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 7/256 | train_loss 1.2474 | train_acc 0.5520 | test_loss 1.0503 | test_acc 0.5895 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 8/256 | train_loss 1.2783 | train_acc 0.5280 | test_loss 1.1508 | test_acc 0.5527 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 9/256 | train_loss 1.2018 | train_acc 0.5400 | test_loss 1.5193 | test_acc 0.4568 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 10/256 | train_loss 1.0863 | train_acc 0.5880 | test_loss 1.4236 | test_acc 0.5408 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 11/256 | train_loss 1.1704 | train_acc 0.6080 | test_loss 1.7248 | test_acc 0.4470 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 12/256 | train_loss 1.1666 | train_acc 0.5740 | test_loss 1.2111 | test_acc 0.5580 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 13/256 | train_loss 0.9242 | train_acc 0.6440 | test_loss 0.9871 | test_acc 0.6193 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 14/256 | train_loss 1.0084 | train_acc 0.6540 | test_loss 0.9945 | test_acc 0.6278 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 15/256 | train_loss 0.9970 | train_acc 0.6400 | test_loss 0.9249 | test_acc 0.6563 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 16/256 | train_loss 0.9296 | train_acc 0.6040 | test_loss 0.9087 | test_acc 0.6662 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 17/256 | train_loss 0.9965 | train_acc 0.6420 | test_loss 1.1176 | test_acc 0.6165 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 18/256 | train_loss 0.9870 | train_acc 0.6640 | test_loss 1.4615 | test_acc 0.5380 | lr 0.0495
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 19/256 | train_loss 1.0935 | train_acc 0.5840 | test_loss 1.3754 | test_acc 0.4803 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 20/256 | train_loss 0.9666 | train_acc 0.6620 | test_loss 0.9416 | test_acc 0.6523 | lr 0.0458
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 21/256 | train_loss 0.9794 | train_acc 0.6600 | test_loss 2.1289 | test_acc 0.3813 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 22/256 | train_loss 1.4668 | train_acc 0.4540 | test_loss 1.1443 | test_acc 0.5858 | lr 0.0390
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 23/256 | train_loss 1.0531 | train_acc 0.6540 | test_loss 0.9539 | test_acc 0.6417 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 24/256 | train_loss 1.0470 | train_acc 0.5980 | test_loss 0.9816 | test_acc 0.6427 | lr 0.0301
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 25/256 | train_loss 0.7545 | train_acc 0.7680 | test_loss 0.9680 | test_acc 0.6507 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 26/256 | train_loss 0.7859 | train_acc 0.7100 | test_loss 0.9101 | test_acc 0.6685 | lr 0.0204
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 27/256 | train_loss 0.7243 | train_acc 0.7500 | test_loss 1.0365 | test_acc 0.6388 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 28/256 | train_loss 0.8451 | train_acc 0.7180 | test_loss 0.9392 | test_acc 0.6730 | lr 0.0115
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 29/256 | train_loss 1.0264 | train_acc 0.6220 | test_loss 0.8518 | test_acc 0.6973 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 30/256 | train_loss 1.0147 | train_acc 0.6600 | test_loss 0.8723 | test_acc 0.6955 | lr 0.0047
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 31/256 | train_loss 0.7411 | train_acc 0.7940 | test_loss 0.8503 | test_acc 0.6993 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 32/256 | train_loss 0.9130 | train_acc 0.7020 | test_loss 0.8469 | test_acc 0.6998 | lr 0.0010
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 33/256 | train_loss 1.0107 | train_acc 0.5620 | test_loss 1.1275 | test_acc 0.6455 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 34/256 | train_loss 1.1572 | train_acc 0.6100 | test_loss 1.1292 | test_acc 0.5695 | lr 0.0499
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 35/256 | train_loss 0.7902 | train_acc 0.7220 | test_loss 1.1029 | test_acc 0.6227 | lr 0.0495
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 36/256 | train_loss 0.7633 | train_acc 0.7560 | test_loss 1.4038 | test_acc 0.5870 | lr 0.0489
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 37/256 | train_loss 0.7982 | train_acc 0.7180 | test_loss 1.3681 | test_acc 0.5852 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 38/256 | train_loss 0.9328 | train_acc 0.7120 | test_loss 1.6044 | test_acc 0.4690 | lr 0.0471
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 39/256 | train_loss 1.0431 | train_acc 0.6360 | test_loss 1.0487 | test_acc 0.6073 | lr 0.0458
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 40/256 | train_loss 0.8898 | train_acc 0.6520 | test_loss 0.8945 | test_acc 0.6763 | lr 0.0444
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 41/256 | train_loss 0.8227 | train_acc 0.7140 | test_loss 0.9170 | test_acc 0.6785 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 42/256 | train_loss 0.8900 | train_acc 0.7520 | test_loss 1.1090 | test_acc 0.6280 | lr 0.0410
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 43/256 | train_loss 1.0066 | train_acc 0.6200 | test_loss 1.1547 | test_acc 0.6113 | lr 0.0390
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 44/256 | train_loss 0.7514 | train_acc 0.7860 | test_loss 0.9891 | test_acc 0.6437 | lr 0.0369
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 45/256 | train_loss 0.6595 | train_acc 0.7760 | test_loss 1.6684 | test_acc 0.6195 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 46/256 | train_loss 0.9856 | train_acc 0.6500 | test_loss 1.3334 | test_acc 0.5822 | lr 0.0324
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 47/256 | train_loss 0.9499 | train_acc 0.6800 | test_loss 1.0035 | test_acc 0.6502 | lr 0.0301
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 48/256 | train_loss 0.7438 | train_acc 0.7800 | test_loss 1.0758 | test_acc 0.6255 | lr 0.0277
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 49/256 | train_loss 0.8885 | train_acc 0.6780 | test_loss 0.9568 | test_acc 0.6775 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 50/256 | train_loss 0.9987 | train_acc 0.6840 | test_loss 1.0057 | test_acc 0.6465 | lr 0.0228
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 51/256 | train_loss 0.9967 | train_acc 0.6540 | test_loss 0.9030 | test_acc 0.6748 | lr 0.0204
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 52/256 | train_loss 0.7636 | train_acc 0.7800 | test_loss 0.8061 | test_acc 0.7142 | lr 0.0181
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 53/256 | train_loss 0.8386 | train_acc 0.7620 | test_loss 0.8186 | test_acc 0.7073 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 54/256 | train_loss 0.8983 | train_acc 0.7000 | test_loss 0.9060 | test_acc 0.6900 | lr 0.0136
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 55/256 | train_loss 0.6927 | train_acc 0.7920 | test_loss 0.8730 | test_acc 0.6955 | lr 0.0115
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 56/256 | train_loss 0.7143 | train_acc 0.8020 | test_loss 0.8176 | test_acc 0.7157 | lr 0.0095
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 57/256 | train_loss 0.6259 | train_acc 0.7720 | test_loss 0.7991 | test_acc 0.7265 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 58/256 | train_loss 0.5829 | train_acc 0.8240 | test_loss 0.7982 | test_acc 0.7245 | lr 0.0061
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 59/256 | train_loss 0.7594 | train_acc 0.7280 | test_loss 0.7833 | test_acc 0.7283 | lr 0.0047
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 60/256 | train_loss 0.7964 | train_acc 0.6800 | test_loss 0.7957 | test_acc 0.7240 | lr 0.0034
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 61/256 | train_loss 0.9504 | train_acc 0.6580 | test_loss 0.8156 | test_acc 0.7158 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 62/256 | train_loss 0.7170 | train_acc 0.7660 | test_loss 0.8178 | test_acc 0.7150 | lr 0.0016
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 63/256 | train_loss 0.7943 | train_acc 0.7200 | test_loss 0.7948 | test_acc 0.7235 | lr 0.0010
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 64/256 | train_loss 0.6654 | train_acc 0.8240 | test_loss 0.7942 | test_acc 0.7220 | lr 0.0006
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 65/256 | train_loss 0.5709 | train_acc 0.8140 | test_loss 1.2716 | test_acc 0.5950 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 66/256 | train_loss 0.6887 | train_acc 0.7260 | test_loss 1.4079 | test_acc 0.5883 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 67/256 | train_loss 0.8887 | train_acc 0.7000 | test_loss 1.3640 | test_acc 0.5633 | lr 0.0499
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 68/256 | train_loss 0.8964 | train_acc 0.6920 | test_loss 1.2427 | test_acc 0.5940 | lr 0.0497
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 69/256 | train_loss 0.8003 | train_acc 0.7560 | test_loss 1.1285 | test_acc 0.5973 | lr 0.0495
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 70/256 | train_loss 1.0416 | train_acc 0.6840 | test_loss 1.0596 | test_acc 0.6287 | lr 0.0493
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 71/256 | train_loss 1.0447 | train_acc 0.6740 | test_loss 0.8605 | test_acc 0.6857 | lr 0.0489
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 72/256 | train_loss 0.8828 | train_acc 0.6640 | test_loss 1.0589 | test_acc 0.6313 | lr 0.0486
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 73/256 | train_loss 0.8805 | train_acc 0.7020 | test_loss 1.0388 | test_acc 0.6343 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 74/256 | train_loss 0.8143 | train_acc 0.7180 | test_loss 0.9842 | test_acc 0.6647 | lr 0.0476
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 75/256 | train_loss 0.8652 | train_acc 0.7300 | test_loss 1.1074 | test_acc 0.6125 | lr 0.0471
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 76/256 | train_loss 0.7507 | train_acc 0.7860 | test_loss 0.9875 | test_acc 0.6595 | lr 0.0465
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 77/256 | train_loss 0.8290 | train_acc 0.7460 | test_loss 0.8485 | test_acc 0.6913 | lr 0.0458
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 78/256 | train_loss 0.9182 | train_acc 0.7180 | test_loss 1.4837 | test_acc 0.5688 | lr 0.0451
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 79/256 | train_loss 0.7633 | train_acc 0.7500 | test_loss 1.0258 | test_acc 0.6427 | lr 0.0444
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 80/256 | train_loss 0.6040 | train_acc 0.8420 | test_loss 0.9823 | test_acc 0.6505 | lr 0.0436
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 81/256 | train_loss 0.7568 | train_acc 0.7580 | test_loss 1.5163 | test_acc 0.5580 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 82/256 | train_loss 0.8505 | train_acc 0.7380 | test_loss 0.9215 | test_acc 0.6778 | lr 0.0419
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 83/256 | train_loss 0.9785 | train_acc 0.6540 | test_loss 1.2399 | test_acc 0.5685 | lr 0.0410
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 84/256 | train_loss 0.9052 | train_acc 0.6720 | test_loss 0.8320 | test_acc 0.7068 | lr 0.0400
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 85/256 | train_loss 0.6977 | train_acc 0.8060 | test_loss 0.9970 | test_acc 0.6438 | lr 0.0390
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 86/256 | train_loss 0.7580 | train_acc 0.7380 | test_loss 1.1306 | test_acc 0.6400 | lr 0.0380
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 87/256 | train_loss 0.9315 | train_acc 0.6660 | test_loss 1.3792 | test_acc 0.5432 | lr 0.0369
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 88/256 | train_loss 0.9116 | train_acc 0.7080 | test_loss 0.9205 | test_acc 0.6855 | lr 0.0358
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 89/256 | train_loss 0.6455 | train_acc 0.7480 | test_loss 0.9597 | test_acc 0.6732 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 90/256 | train_loss 0.8030 | train_acc 0.7400 | test_loss 1.1676 | test_acc 0.6238 | lr 0.0336
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 91/256 | train_loss 0.7271 | train_acc 0.8120 | test_loss 1.0728 | test_acc 0.6488 | lr 0.0324
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 92/256 | train_loss 0.8293 | train_acc 0.7060 | test_loss 0.9425 | test_acc 0.6725 | lr 0.0313
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 93/256 | train_loss 0.7796 | train_acc 0.8240 | test_loss 0.8554 | test_acc 0.7020 | lr 0.0301
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 94/256 | train_loss 0.8833 | train_acc 0.7600 | test_loss 0.9635 | test_acc 0.6615 | lr 0.0289
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 95/256 | train_loss 0.8063 | train_acc 0.7280 | test_loss 0.9256 | test_acc 0.6767 | lr 0.0277
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 96/256 | train_loss 0.6447 | train_acc 0.7840 | test_loss 0.7985 | test_acc 0.7293 | lr 0.0265
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 97/256 | train_loss 0.5908 | train_acc 0.8200 | test_loss 0.8248 | test_acc 0.7192 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 98/256 | train_loss 0.7017 | train_acc 0.7860 | test_loss 0.8085 | test_acc 0.7275 | lr 0.0240
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 99/256 | train_loss 0.6413 | train_acc 0.7920 | test_loss 0.8258 | test_acc 0.7222 | lr 0.0228
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 100/256 | train_loss 0.7264 | train_acc 0.7400 | test_loss 1.0002 | test_acc 0.6742 | lr 0.0216
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 101/256 | train_loss 0.5996 | train_acc 0.8420 | test_loss 1.0832 | test_acc 0.6528 | lr 0.0204
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 102/256 | train_loss 0.5936 | train_acc 0.8500 | test_loss 0.9997 | test_acc 0.6695 | lr 0.0192
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 103/256 | train_loss 0.5713 | train_acc 0.7780 | test_loss 1.0014 | test_acc 0.6735 | lr 0.0181
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 104/256 | train_loss 0.6684 | train_acc 0.8380 | test_loss 0.8200 | test_acc 0.7268 | lr 0.0169
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 105/256 | train_loss 0.6854 | train_acc 0.7820 | test_loss 0.9467 | test_acc 0.6830 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 106/256 | train_loss 0.6769 | train_acc 0.8120 | test_loss 0.8696 | test_acc 0.7138 | lr 0.0147
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 107/256 | train_loss 0.5849 | train_acc 0.8460 | test_loss 0.9583 | test_acc 0.6925 | lr 0.0136
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 108/256 | train_loss 0.6712 | train_acc 0.7900 | test_loss 0.8974 | test_acc 0.7067 | lr 0.0125
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 109/256 | train_loss 0.6198 | train_acc 0.7940 | test_loss 0.8903 | test_acc 0.7085 | lr 0.0115
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 110/256 | train_loss 0.8543 | train_acc 0.7720 | test_loss 0.9282 | test_acc 0.7007 | lr 0.0105
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 111/256 | train_loss 0.9669 | train_acc 0.6600 | test_loss 0.8795 | test_acc 0.7047 | lr 0.0095
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 112/256 | train_loss 0.6972 | train_acc 0.7020 | test_loss 0.7931 | test_acc 0.7335 | lr 0.0086
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 113/256 | train_loss 0.6170 | train_acc 0.8360 | test_loss 0.8309 | test_acc 0.7148 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 114/256 | train_loss 0.7287 | train_acc 0.7320 | test_loss 0.8307 | test_acc 0.7220 | lr 0.0069
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 115/256 | train_loss 0.8049 | train_acc 0.7300 | test_loss 0.8310 | test_acc 0.7252 | lr 0.0061
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 116/256 | train_loss 0.5999 | train_acc 0.8100 | test_loss 0.7981 | test_acc 0.7357 | lr 0.0054
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 117/256 | train_loss 0.4868 | train_acc 0.8320 | test_loss 0.7835 | test_acc 0.7412 | lr 0.0047
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 118/256 | train_loss 0.6182 | train_acc 0.8300 | test_loss 0.7923 | test_acc 0.7410 | lr 0.0040
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 119/256 | train_loss 0.8133 | train_acc 0.7660 | test_loss 0.8147 | test_acc 0.7362 | lr 0.0034
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 120/256 | train_loss 0.6341 | train_acc 0.7980 | test_loss 0.8159 | test_acc 0.7342 | lr 0.0029
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 121/256 | train_loss 0.4471 | train_acc 0.8680 | test_loss 0.8220 | test_acc 0.7317 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 122/256 | train_loss 0.7733 | train_acc 0.7560 | test_loss 0.8499 | test_acc 0.7260 | lr 0.0019
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 123/256 | train_loss 0.6273 | train_acc 0.7960 | test_loss 0.8284 | test_acc 0.7262 | lr 0.0016
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 124/256 | train_loss 0.8378 | train_acc 0.7680 | test_loss 0.8308 | test_acc 0.7305 | lr 0.0012
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 125/256 | train_loss 0.4943 | train_acc 0.8200 | test_loss 0.8260 | test_acc 0.7330 | lr 0.0010
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 126/256 | train_loss 0.4165 | train_acc 0.8400 | test_loss 0.8267 | test_acc 0.7320 | lr 0.0008
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 127/256 | train_loss 0.5416 | train_acc 0.7400 | test_loss 0.8170 | test_acc 0.7318 | lr 0.0006
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 128/256 | train_loss 0.6436 | train_acc 0.8240 | test_loss 0.8328 | test_acc 0.7302 | lr 0.0005
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 129/256 | train_loss 0.5567 | train_acc 0.8460 | test_loss 0.9723 | test_acc 0.6912 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 130/256 | train_loss 0.7766 | train_acc 0.6840 | test_loss 1.0106 | test_acc 0.6597 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 131/256 | train_loss 0.9749 | train_acc 0.6800 | test_loss 0.9829 | test_acc 0.6933 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 132/256 | train_loss 0.8448 | train_acc 0.7300 | test_loss 0.9215 | test_acc 0.6783 | lr 0.0499
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 133/256 | train_loss 0.6324 | train_acc 0.8240 | test_loss 1.3059 | test_acc 0.6138 | lr 0.0499
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 134/256 | train_loss 0.8184 | train_acc 0.7060 | test_loss 0.9874 | test_acc 0.6557 | lr 0.0498
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 135/256 | train_loss 0.7215 | train_acc 0.7940 | test_loss 0.9567 | test_acc 0.6965 | lr 0.0497
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 136/256 | train_loss 0.5680 | train_acc 0.7580 | test_loss 1.2865 | test_acc 0.6060 | lr 0.0496
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 137/256 | train_loss 0.8666 | train_acc 0.6960 | test_loss 0.9700 | test_acc 0.6833 | lr 0.0495
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 138/256 | train_loss 0.8247 | train_acc 0.7160 | test_loss 1.2091 | test_acc 0.6185 | lr 0.0494
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 139/256 | train_loss 0.6598 | train_acc 0.7300 | test_loss 1.2069 | test_acc 0.6218 | lr 0.0493
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 140/256 | train_loss 0.9126 | train_acc 0.7420 | test_loss 1.0794 | test_acc 0.6187 | lr 0.0491
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 141/256 | train_loss 0.6304 | train_acc 0.8100 | test_loss 1.0598 | test_acc 0.6653 | lr 0.0489
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 142/256 | train_loss 0.8878 | train_acc 0.6900 | test_loss 1.4601 | test_acc 0.5503 | lr 0.0488
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 143/256 | train_loss 0.9083 | train_acc 0.7040 | test_loss 1.0307 | test_acc 0.6542 | lr 0.0486
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 144/256 | train_loss 0.6787 | train_acc 0.8260 | test_loss 1.0503 | test_acc 0.6742 | lr 0.0483
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 145/256 | train_loss 0.8162 | train_acc 0.7660 | test_loss 1.1442 | test_acc 0.6100 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 146/256 | train_loss 0.6202 | train_acc 0.7840 | test_loss 0.9407 | test_acc 0.6887 | lr 0.0479
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 147/256 | train_loss 0.5956 | train_acc 0.8320 | test_loss 1.0314 | test_acc 0.6660 | lr 0.0476
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 148/256 | train_loss 0.8397 | train_acc 0.7360 | test_loss 0.9860 | test_acc 0.6635 | lr 0.0474
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 149/256 | train_loss 0.7130 | train_acc 0.7640 | test_loss 1.0283 | test_acc 0.6648 | lr 0.0471
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 150/256 | train_loss 0.8017 | train_acc 0.7320 | test_loss 0.8958 | test_acc 0.6943 | lr 0.0468
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 151/256 | train_loss 0.9838 | train_acc 0.5920 | test_loss 1.2451 | test_acc 0.6220 | lr 0.0465
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 152/256 | train_loss 0.7741 | train_acc 0.7760 | test_loss 1.0181 | test_acc 0.6635 | lr 0.0462
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 153/256 | train_loss 0.6908 | train_acc 0.7640 | test_loss 0.8991 | test_acc 0.7000 | lr 0.0458
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 154/256 | train_loss 0.9321 | train_acc 0.7280 | test_loss 0.9575 | test_acc 0.6812 | lr 0.0455
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 155/256 | train_loss 0.7256 | train_acc 0.7420 | test_loss 0.9402 | test_acc 0.6813 | lr 0.0451
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 156/256 | train_loss 0.7247 | train_acc 0.7840 | test_loss 1.0184 | test_acc 0.6588 | lr 0.0448
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 157/256 | train_loss 0.9183 | train_acc 0.6640 | test_loss 0.9853 | test_acc 0.6693 | lr 0.0444
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 158/256 | train_loss 0.5273 | train_acc 0.8300 | test_loss 0.8827 | test_acc 0.6988 | lr 0.0440
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 159/256 | train_loss 0.7425 | train_acc 0.7920 | test_loss 1.0111 | test_acc 0.6710 | lr 0.0436
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 160/256 | train_loss 0.6304 | train_acc 0.7800 | test_loss 1.2874 | test_acc 0.5767 | lr 0.0432
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 161/256 | train_loss 0.9199 | train_acc 0.6520 | test_loss 0.9101 | test_acc 0.6810 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 162/256 | train_loss 0.6228 | train_acc 0.8060 | test_loss 0.9084 | test_acc 0.7005 | lr 0.0423
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 163/256 | train_loss 0.6929 | train_acc 0.7240 | test_loss 1.0305 | test_acc 0.6440 | lr 0.0419
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 164/256 | train_loss 0.7674 | train_acc 0.6800 | test_loss 0.9192 | test_acc 0.6867 | lr 0.0414
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 165/256 | train_loss 0.6205 | train_acc 0.7780 | test_loss 0.9701 | test_acc 0.6898 | lr 0.0410
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 166/256 | train_loss 0.7900 | train_acc 0.6780 | test_loss 0.9956 | test_acc 0.6803 | lr 0.0405
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 167/256 | train_loss 0.6203 | train_acc 0.7720 | test_loss 0.9626 | test_acc 0.6807 | lr 0.0400
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 168/256 | train_loss 0.5294 | train_acc 0.8340 | test_loss 0.9304 | test_acc 0.7085 | lr 0.0395
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 169/256 | train_loss 1.1202 | train_acc 0.5680 | test_loss 0.8939 | test_acc 0.7062 | lr 0.0390
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 170/256 | train_loss 0.7405 | train_acc 0.7860 | test_loss 0.8155 | test_acc 0.7228 | lr 0.0385
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 171/256 | train_loss 0.8099 | train_acc 0.6840 | test_loss 0.9441 | test_acc 0.6963 | lr 0.0380
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 172/256 | train_loss 0.6231 | train_acc 0.7980 | test_loss 0.9200 | test_acc 0.6975 | lr 0.0374
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 173/256 | train_loss 0.8184 | train_acc 0.6880 | test_loss 0.9465 | test_acc 0.6948 | lr 0.0369
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 174/256 | train_loss 0.6267 | train_acc 0.8200 | test_loss 0.8786 | test_acc 0.7133 | lr 0.0364
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 175/256 | train_loss 0.5280 | train_acc 0.8740 | test_loss 0.8880 | test_acc 0.7148 | lr 0.0358
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 176/256 | train_loss 0.6693 | train_acc 0.7560 | test_loss 0.8727 | test_acc 0.7052 | lr 0.0353
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 177/256 | train_loss 0.6795 | train_acc 0.7920 | test_loss 0.9948 | test_acc 0.6723 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 178/256 | train_loss 0.7927 | train_acc 0.6800 | test_loss 0.8967 | test_acc 0.6997 | lr 0.0342
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 179/256 | train_loss 0.5517 | train_acc 0.8760 | test_loss 0.8909 | test_acc 0.7065 | lr 0.0336
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 180/256 | train_loss 0.5682 | train_acc 0.7800 | test_loss 0.8560 | test_acc 0.7227 | lr 0.0330
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 181/256 | train_loss 0.8171 | train_acc 0.7500 | test_loss 0.8850 | test_acc 0.7045 | lr 0.0324
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 182/256 | train_loss 0.6510 | train_acc 0.7640 | test_loss 1.1327 | test_acc 0.6450 | lr 0.0319
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 183/256 | train_loss 0.7858 | train_acc 0.7520 | test_loss 0.9740 | test_acc 0.6980 | lr 0.0313
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 184/256 | train_loss 0.6040 | train_acc 0.8160 | test_loss 0.8711 | test_acc 0.7043 | lr 0.0307
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 185/256 | train_loss 0.7662 | train_acc 0.6960 | test_loss 0.9322 | test_acc 0.6858 | lr 0.0301
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 186/256 | train_loss 0.6005 | train_acc 0.8640 | test_loss 0.9128 | test_acc 0.7125 | lr 0.0295
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 187/256 | train_loss 0.6995 | train_acc 0.7980 | test_loss 0.7859 | test_acc 0.7315 | lr 0.0289
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 188/256 | train_loss 0.6162 | train_acc 0.8460 | test_loss 0.8557 | test_acc 0.7132 | lr 0.0283
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 189/256 | train_loss 0.6366 | train_acc 0.8300 | test_loss 1.1084 | test_acc 0.6403 | lr 0.0277
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 190/256 | train_loss 0.7200 | train_acc 0.7720 | test_loss 0.9321 | test_acc 0.6832 | lr 0.0271
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 191/256 | train_loss 0.5048 | train_acc 0.8620 | test_loss 0.8991 | test_acc 0.6912 | lr 0.0265
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 192/256 | train_loss 0.7678 | train_acc 0.7540 | test_loss 0.8135 | test_acc 0.7067 | lr 0.0259
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 193/256 | train_loss 0.4420 | train_acc 0.8560 | test_loss 0.7678 | test_acc 0.7330 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 194/256 | train_loss 0.7398 | train_acc 0.7560 | test_loss 0.9491 | test_acc 0.6803 | lr 0.0246
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 195/256 | train_loss 0.7198 | train_acc 0.7660 | test_loss 0.8223 | test_acc 0.7278 | lr 0.0240
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 196/256 | train_loss 0.6264 | train_acc 0.8580 | test_loss 0.8301 | test_acc 0.7258 | lr 0.0234
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 197/256 | train_loss 0.5649 | train_acc 0.8160 | test_loss 0.9193 | test_acc 0.7097 | lr 0.0228
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 198/256 | train_loss 0.5069 | train_acc 0.8520 | test_loss 1.0871 | test_acc 0.6690 | lr 0.0222
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 199/256 | train_loss 0.6741 | train_acc 0.7860 | test_loss 0.9267 | test_acc 0.7055 | lr 0.0216
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 200/256 | train_loss 0.3748 | train_acc 0.8580 | test_loss 0.8275 | test_acc 0.7300 | lr 0.0210
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 201/256 | train_loss 0.6408 | train_acc 0.7560 | test_loss 0.9139 | test_acc 0.7017 | lr 0.0204
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 202/256 | train_loss 0.6697 | train_acc 0.7800 | test_loss 0.8370 | test_acc 0.7223 | lr 0.0198
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 203/256 | train_loss 0.6983 | train_acc 0.7800 | test_loss 0.8734 | test_acc 0.7100 | lr 0.0192
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 204/256 | train_loss 0.7655 | train_acc 0.7200 | test_loss 0.7706 | test_acc 0.7475 | lr 0.0186
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 205/256 | train_loss 0.5449 | train_acc 0.8460 | test_loss 0.8298 | test_acc 0.7272 | lr 0.0181
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 206/256 | train_loss 0.4744 | train_acc 0.8120 | test_loss 0.8856 | test_acc 0.7120 | lr 0.0175
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 207/256 | train_loss 0.5135 | train_acc 0.8400 | test_loss 0.9001 | test_acc 0.7120 | lr 0.0169
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 208/256 | train_loss 0.7494 | train_acc 0.7420 | test_loss 0.9623 | test_acc 0.6927 | lr 0.0163
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 209/256 | train_loss 0.6933 | train_acc 0.7600 | test_loss 0.8695 | test_acc 0.7050 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 210/256 | train_loss 0.5708 | train_acc 0.7540 | test_loss 0.8667 | test_acc 0.7137 | lr 0.0152
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 211/256 | train_loss 0.4742 | train_acc 0.8720 | test_loss 0.8132 | test_acc 0.7282 | lr 0.0147
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 212/256 | train_loss 0.5430 | train_acc 0.7540 | test_loss 0.8223 | test_acc 0.7260 | lr 0.0141
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 213/256 | train_loss 0.5470 | train_acc 0.8060 | test_loss 0.8243 | test_acc 0.7272 | lr 0.0136
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 214/256 | train_loss 0.3692 | train_acc 0.9140 | test_loss 0.7996 | test_acc 0.7337 | lr 0.0131
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 215/256 | train_loss 0.6876 | train_acc 0.8120 | test_loss 0.8338 | test_acc 0.7220 | lr 0.0125
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 216/256 | train_loss 0.7766 | train_acc 0.7940 | test_loss 0.8452 | test_acc 0.7197 | lr 0.0120
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 217/256 | train_loss 0.6888 | train_acc 0.8320 | test_loss 0.8623 | test_acc 0.7142 | lr 0.0115
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 218/256 | train_loss 0.3827 | train_acc 0.8780 | test_loss 0.7955 | test_acc 0.7353 | lr 0.0110
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 219/256 | train_loss 0.5122 | train_acc 0.8840 | test_loss 0.7861 | test_acc 0.7362 | lr 0.0105
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 220/256 | train_loss 0.5725 | train_acc 0.8560 | test_loss 0.8081 | test_acc 0.7303 | lr 0.0100
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 221/256 | train_loss 0.4536 | train_acc 0.8880 | test_loss 0.7912 | test_acc 0.7305 | lr 0.0095
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 222/256 | train_loss 0.6282 | train_acc 0.8500 | test_loss 0.8092 | test_acc 0.7315 | lr 0.0091
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 223/256 | train_loss 0.6009 | train_acc 0.7860 | test_loss 0.8295 | test_acc 0.7287 | lr 0.0086
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 224/256 | train_loss 0.5489 | train_acc 0.8140 | test_loss 0.8090 | test_acc 0.7303 | lr 0.0082
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 225/256 | train_loss 0.5524 | train_acc 0.8260 | test_loss 0.8493 | test_acc 0.7242 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 226/256 | train_loss 0.4188 | train_acc 0.9020 | test_loss 0.7897 | test_acc 0.7402 | lr 0.0073
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 227/256 | train_loss 0.6294 | train_acc 0.8800 | test_loss 0.7778 | test_acc 0.7402 | lr 0.0069
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 228/256 | train_loss 0.6030 | train_acc 0.8240 | test_loss 0.8199 | test_acc 0.7317 | lr 0.0065
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 229/256 | train_loss 0.7577 | train_acc 0.7140 | test_loss 0.8372 | test_acc 0.7293 | lr 0.0061
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 230/256 | train_loss 0.4334 | train_acc 0.8980 | test_loss 0.7879 | test_acc 0.7417 | lr 0.0057
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 231/256 | train_loss 0.5063 | train_acc 0.7680 | test_loss 0.8134 | test_acc 0.7375 | lr 0.0054
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 232/256 | train_loss 0.5867 | train_acc 0.8680 | test_loss 0.8211 | test_acc 0.7343 | lr 0.0050
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 233/256 | train_loss 0.5966 | train_acc 0.8280 | test_loss 0.7827 | test_acc 0.7452 | lr 0.0047
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 234/256 | train_loss 0.4713 | train_acc 0.8520 | test_loss 0.7824 | test_acc 0.7432 | lr 0.0043
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 235/256 | train_loss 0.5971 | train_acc 0.8960 | test_loss 0.7918 | test_acc 0.7407 | lr 0.0040
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 236/256 | train_loss 0.7838 | train_acc 0.7940 | test_loss 0.8024 | test_acc 0.7410 | lr 0.0037
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 237/256 | train_loss 0.4093 | train_acc 0.8660 | test_loss 0.7818 | test_acc 0.7463 | lr 0.0034
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 238/256 | train_loss 0.4251 | train_acc 0.8200 | test_loss 0.8004 | test_acc 0.7388 | lr 0.0031
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 239/256 | train_loss 0.4302 | train_acc 0.8760 | test_loss 0.7942 | test_acc 0.7415 | lr 0.0029
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 240/256 | train_loss 0.4140 | train_acc 0.8540 | test_loss 0.7896 | test_acc 0.7433 | lr 0.0026
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 241/256 | train_loss 0.7703 | train_acc 0.7080 | test_loss 0.7823 | test_acc 0.7412 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 242/256 | train_loss 0.5546 | train_acc 0.8760 | test_loss 0.7863 | test_acc 0.7437 | lr 0.0022
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 243/256 | train_loss 0.3232 | train_acc 0.9500 | test_loss 0.8031 | test_acc 0.7440 | lr 0.0019
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 244/256 | train_loss 0.6467 | train_acc 0.8600 | test_loss 0.7932 | test_acc 0.7407 | lr 0.0017
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 245/256 | train_loss 0.4363 | train_acc 0.8800 | test_loss 0.7839 | test_acc 0.7433 | lr 0.0016
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 246/256 | train_loss 0.1613 | train_acc 0.9640 | test_loss 0.8016 | test_acc 0.7427 | lr 0.0014
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 247/256 | train_loss 0.5216 | train_acc 0.9200 | test_loss 0.7942 | test_acc 0.7443 | lr 0.0012
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 248/256 | train_loss 0.6388 | train_acc 0.7780 | test_loss 0.7897 | test_acc 0.7387 | lr 0.0011
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 249/256 | train_loss 0.5737 | train_acc 0.7680 | test_loss 0.7851 | test_acc 0.7428 | lr 0.0010
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 250/256 | train_loss 0.4511 | train_acc 0.9000 | test_loss 0.7877 | test_acc 0.7405 | lr 0.0009
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 251/256 | train_loss 0.6680 | train_acc 0.7600 | test_loss 0.7791 | test_acc 0.7440 | lr 0.0008
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 252/256 | train_loss 0.5531 | train_acc 0.7920 | test_loss 0.7676 | test_acc 0.7433 | lr 0.0007
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 253/256 | train_loss 0.4927 | train_acc 0.8480 | test_loss 0.7784 | test_acc 0.7460 | lr 0.0006
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 254/256 | train_loss 0.3882 | train_acc 0.8760 | test_loss 0.7799 | test_acc 0.7455 | lr 0.0006
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 255/256 | train_loss 0.6641 | train_acc 0.8140 | test_loss 0.7723 | test_acc 0.7418 | lr 0.0005
+[INFO] rainbow_memory.py:184 > Task 2 | Epoch 256/256 | train_loss 0.4822 | train_acc 0.8540 | test_loss 0.7673 | test_acc 0.7452 | lr 0.0005
+[INFO] finetune.py:157 > Apply after_task
+[WARNING] finetune.py:230 > Already updated the memory during this iter (2)
+[INFO] main.py:398 > [2-4] Update the information for the current task
+[INFO] finetune.py:157 > Apply after_task
+[WARNING] finetune.py:230 > Already updated the memory during this iter (2)
+[INFO] main.py:405 > [2-5] Report task result
+[INFO] main.py:316 > [2-1] Prepare a datalist for the current task
+[INFO] main.py:349 > [2-2] Set environment for the current task
+[INFO] finetune.py:104 > Apply before_task
+[INFO] finetune.py:146 > Reset the optimizer and scheduler states
+[INFO] finetune.py:152 > Increasing the head of fc 10 -> 10
+[INFO] main.py:357 > [2-3] Start to train under online
+[INFO] main.py:372 > Train over streamed data once
+[INFO] rainbow_memory.py:120 > Streamed samples: 800
+[INFO] rainbow_memory.py:121 > In-memory samples: 500
+[INFO] rainbow_memory.py:122 > Pseudo samples: 9984
+[INFO] rainbow_memory.py:128 > Train samples: 11284
+[INFO] rainbow_memory.py:129 > Test samples: 8000
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 1/1 | train_loss 0.5610 | train_acc 0.7273 | test_loss 7.2587 | test_acc 0.2355 | lr 0.0050
+[INFO] finetune.py:169 > Update memory over 10 classes by uncertainty
+[INFO] finetune.py:679 > Compute uncertainty by vr_randaug!
+[WARNING] finetune.py:639 > Fill the unused slots by breaking the equilibrium.
+[INFO] finetune.py:223 > Memory statistic
+[INFO] finetune.py:225 > 
+airplane      101
+horse          74
+truck          63
+frog           58
+automobile     52
+bird           52
+dog            50
+deer           50
+Name: klass, dtype: int64
+[INFO] main.py:388 > Train over memory
+[INFO] rainbow_memory.py:120 > Streamed samples: 0
+[INFO] rainbow_memory.py:121 > In-memory samples: 500
+[INFO] rainbow_memory.py:122 > Pseudo samples: 0
+[INFO] rainbow_memory.py:128 > Train samples: 500
+[INFO] rainbow_memory.py:129 > Test samples: 8000
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 1/256 | train_loss 3.4253 | train_acc 0.3220 | test_loss 1.8065 | test_acc 0.2680 | lr 0.0050
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 2/256 | train_loss 2.5567 | train_acc 0.4280 | test_loss 2.6561 | test_acc 0.2639 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 3/256 | train_loss 2.2278 | train_acc 0.4060 | test_loss 1.8840 | test_acc 0.4258 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 4/256 | train_loss 1.9164 | train_acc 0.4080 | test_loss 1.6349 | test_acc 0.4749 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 5/256 | train_loss 1.6982 | train_acc 0.4560 | test_loss 1.7811 | test_acc 0.4437 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 6/256 | train_loss 1.6214 | train_acc 0.4340 | test_loss 1.7230 | test_acc 0.4335 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 7/256 | train_loss 1.4849 | train_acc 0.4840 | test_loss 1.2776 | test_acc 0.5771 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 8/256 | train_loss 1.2444 | train_acc 0.6380 | test_loss 1.2524 | test_acc 0.5785 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 9/256 | train_loss 1.4592 | train_acc 0.5480 | test_loss 1.6122 | test_acc 0.4426 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 10/256 | train_loss 1.1842 | train_acc 0.6300 | test_loss 1.2715 | test_acc 0.5775 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 11/256 | train_loss 1.3532 | train_acc 0.6000 | test_loss 1.3263 | test_acc 0.5366 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 12/256 | train_loss 1.2363 | train_acc 0.5720 | test_loss 1.4059 | test_acc 0.5169 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 13/256 | train_loss 1.2871 | train_acc 0.5540 | test_loss 1.1319 | test_acc 0.6181 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 14/256 | train_loss 0.9216 | train_acc 0.7020 | test_loss 1.0503 | test_acc 0.6416 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 15/256 | train_loss 0.9548 | train_acc 0.7040 | test_loss 1.0335 | test_acc 0.6524 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 16/256 | train_loss 0.9643 | train_acc 0.6520 | test_loss 1.0174 | test_acc 0.6600 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 17/256 | train_loss 1.1817 | train_acc 0.6000 | test_loss 1.2769 | test_acc 0.5720 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 18/256 | train_loss 1.1939 | train_acc 0.5860 | test_loss 1.4633 | test_acc 0.5373 | lr 0.0495
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 19/256 | train_loss 1.1846 | train_acc 0.6700 | test_loss 1.2528 | test_acc 0.6054 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 20/256 | train_loss 1.1614 | train_acc 0.6360 | test_loss 1.2700 | test_acc 0.5886 | lr 0.0458
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 21/256 | train_loss 1.2507 | train_acc 0.5900 | test_loss 1.1157 | test_acc 0.6244 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 22/256 | train_loss 0.8624 | train_acc 0.7200 | test_loss 1.3772 | test_acc 0.5569 | lr 0.0390
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 23/256 | train_loss 1.2448 | train_acc 0.5940 | test_loss 1.1080 | test_acc 0.6225 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 24/256 | train_loss 0.9351 | train_acc 0.7180 | test_loss 1.1070 | test_acc 0.6320 | lr 0.0301
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 25/256 | train_loss 0.9677 | train_acc 0.6880 | test_loss 1.0623 | test_acc 0.6405 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 26/256 | train_loss 0.8446 | train_acc 0.7560 | test_loss 0.9748 | test_acc 0.6695 | lr 0.0204
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 27/256 | train_loss 0.8646 | train_acc 0.7440 | test_loss 1.0294 | test_acc 0.6542 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 28/256 | train_loss 0.7594 | train_acc 0.7860 | test_loss 1.0472 | test_acc 0.6541 | lr 0.0115
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 29/256 | train_loss 0.9644 | train_acc 0.7240 | test_loss 1.0723 | test_acc 0.6469 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 30/256 | train_loss 0.6954 | train_acc 0.7820 | test_loss 1.0217 | test_acc 0.6637 | lr 0.0047
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 31/256 | train_loss 0.7912 | train_acc 0.7380 | test_loss 1.0121 | test_acc 0.6680 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 32/256 | train_loss 0.7651 | train_acc 0.7940 | test_loss 0.9863 | test_acc 0.6749 | lr 0.0010
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 33/256 | train_loss 0.6923 | train_acc 0.7800 | test_loss 1.1345 | test_acc 0.6378 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 34/256 | train_loss 0.9050 | train_acc 0.6940 | test_loss 2.1521 | test_acc 0.4364 | lr 0.0499
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 35/256 | train_loss 1.2655 | train_acc 0.5820 | test_loss 1.0793 | test_acc 0.6209 | lr 0.0495
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 36/256 | train_loss 0.9994 | train_acc 0.6780 | test_loss 1.3779 | test_acc 0.5461 | lr 0.0489
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 37/256 | train_loss 1.2650 | train_acc 0.6280 | test_loss 1.0823 | test_acc 0.6306 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 38/256 | train_loss 1.1151 | train_acc 0.6200 | test_loss 1.0231 | test_acc 0.6524 | lr 0.0471
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 39/256 | train_loss 0.9855 | train_acc 0.7180 | test_loss 1.1026 | test_acc 0.6396 | lr 0.0458
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 40/256 | train_loss 0.8979 | train_acc 0.7600 | test_loss 1.2628 | test_acc 0.5926 | lr 0.0444
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 41/256 | train_loss 1.1554 | train_acc 0.6260 | test_loss 1.4256 | test_acc 0.5045 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 42/256 | train_loss 0.7574 | train_acc 0.8100 | test_loss 1.1148 | test_acc 0.6262 | lr 0.0410
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 43/256 | train_loss 0.7158 | train_acc 0.7820 | test_loss 1.2022 | test_acc 0.6256 | lr 0.0390
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 44/256 | train_loss 1.1261 | train_acc 0.6260 | test_loss 1.3364 | test_acc 0.5707 | lr 0.0369
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 45/256 | train_loss 0.7876 | train_acc 0.7580 | test_loss 1.2759 | test_acc 0.5786 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 46/256 | train_loss 0.9291 | train_acc 0.6680 | test_loss 1.1987 | test_acc 0.6024 | lr 0.0324
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 47/256 | train_loss 0.8819 | train_acc 0.7340 | test_loss 1.0924 | test_acc 0.6310 | lr 0.0301
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 48/256 | train_loss 0.7808 | train_acc 0.7940 | test_loss 0.9589 | test_acc 0.6790 | lr 0.0277
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 49/256 | train_loss 0.6682 | train_acc 0.8140 | test_loss 1.0880 | test_acc 0.6472 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 50/256 | train_loss 0.5864 | train_acc 0.8300 | test_loss 1.1015 | test_acc 0.6434 | lr 0.0228
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 51/256 | train_loss 1.1999 | train_acc 0.6100 | test_loss 1.1039 | test_acc 0.6350 | lr 0.0204
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 52/256 | train_loss 1.1378 | train_acc 0.6200 | test_loss 1.0105 | test_acc 0.6639 | lr 0.0181
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 53/256 | train_loss 0.7526 | train_acc 0.8060 | test_loss 0.9588 | test_acc 0.6830 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 54/256 | train_loss 0.6787 | train_acc 0.7900 | test_loss 0.9888 | test_acc 0.6769 | lr 0.0136
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 55/256 | train_loss 0.7633 | train_acc 0.8160 | test_loss 1.0331 | test_acc 0.6587 | lr 0.0115
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 56/256 | train_loss 0.7119 | train_acc 0.8060 | test_loss 0.9708 | test_acc 0.6777 | lr 0.0095
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 57/256 | train_loss 0.9304 | train_acc 0.7160 | test_loss 0.9677 | test_acc 0.6811 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 58/256 | train_loss 0.8020 | train_acc 0.7560 | test_loss 0.9704 | test_acc 0.6747 | lr 0.0061
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 59/256 | train_loss 0.8554 | train_acc 0.7460 | test_loss 0.9380 | test_acc 0.6813 | lr 0.0047
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 60/256 | train_loss 0.6898 | train_acc 0.8420 | test_loss 0.9182 | test_acc 0.6906 | lr 0.0034
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 61/256 | train_loss 0.7710 | train_acc 0.7880 | test_loss 0.9158 | test_acc 0.6909 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 62/256 | train_loss 0.8437 | train_acc 0.7720 | test_loss 0.9133 | test_acc 0.6917 | lr 0.0016
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 63/256 | train_loss 0.8589 | train_acc 0.7720 | test_loss 0.9147 | test_acc 0.6934 | lr 0.0010
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 64/256 | train_loss 0.6929 | train_acc 0.7940 | test_loss 0.9199 | test_acc 0.6915 | lr 0.0006
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 65/256 | train_loss 0.8023 | train_acc 0.7520 | test_loss 1.1831 | test_acc 0.6050 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 66/256 | train_loss 0.7384 | train_acc 0.7820 | test_loss 1.2740 | test_acc 0.5976 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 67/256 | train_loss 0.8982 | train_acc 0.7620 | test_loss 1.2900 | test_acc 0.5734 | lr 0.0499
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 68/256 | train_loss 0.7433 | train_acc 0.8160 | test_loss 1.1453 | test_acc 0.6470 | lr 0.0497
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 69/256 | train_loss 0.8012 | train_acc 0.8160 | test_loss 1.1668 | test_acc 0.6316 | lr 0.0495
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 70/256 | train_loss 0.8318 | train_acc 0.7960 | test_loss 1.1449 | test_acc 0.6341 | lr 0.0493
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 71/256 | train_loss 0.8013 | train_acc 0.7920 | test_loss 1.4229 | test_acc 0.5451 | lr 0.0489
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 72/256 | train_loss 0.8062 | train_acc 0.7500 | test_loss 1.0894 | test_acc 0.6560 | lr 0.0486
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 73/256 | train_loss 0.7216 | train_acc 0.7420 | test_loss 1.4138 | test_acc 0.5850 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 74/256 | train_loss 1.0552 | train_acc 0.6660 | test_loss 1.2324 | test_acc 0.5939 | lr 0.0476
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 75/256 | train_loss 0.7551 | train_acc 0.7880 | test_loss 1.1205 | test_acc 0.6261 | lr 0.0471
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 76/256 | train_loss 0.7713 | train_acc 0.7460 | test_loss 1.1374 | test_acc 0.6301 | lr 0.0465
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 77/256 | train_loss 1.0633 | train_acc 0.6080 | test_loss 1.3114 | test_acc 0.5923 | lr 0.0458
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 78/256 | train_loss 0.8814 | train_acc 0.6900 | test_loss 1.1133 | test_acc 0.6290 | lr 0.0451
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 79/256 | train_loss 0.7404 | train_acc 0.7940 | test_loss 1.3223 | test_acc 0.5809 | lr 0.0444
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 80/256 | train_loss 0.8717 | train_acc 0.7500 | test_loss 1.0741 | test_acc 0.6432 | lr 0.0436
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 81/256 | train_loss 0.9937 | train_acc 0.6720 | test_loss 1.1408 | test_acc 0.6172 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 82/256 | train_loss 1.0435 | train_acc 0.6860 | test_loss 0.9516 | test_acc 0.6751 | lr 0.0419
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 83/256 | train_loss 0.7986 | train_acc 0.7780 | test_loss 1.1226 | test_acc 0.6425 | lr 0.0410
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 84/256 | train_loss 0.8099 | train_acc 0.7800 | test_loss 1.2209 | test_acc 0.6108 | lr 0.0400
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 85/256 | train_loss 0.7155 | train_acc 0.8000 | test_loss 1.2544 | test_acc 0.6011 | lr 0.0390
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 86/256 | train_loss 0.7842 | train_acc 0.7120 | test_loss 1.1394 | test_acc 0.6286 | lr 0.0380
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 87/256 | train_loss 0.6669 | train_acc 0.8560 | test_loss 1.0800 | test_acc 0.6474 | lr 0.0369
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 88/256 | train_loss 0.7531 | train_acc 0.7980 | test_loss 1.1036 | test_acc 0.6390 | lr 0.0358
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 89/256 | train_loss 0.5568 | train_acc 0.8620 | test_loss 1.0962 | test_acc 0.6609 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 90/256 | train_loss 0.8718 | train_acc 0.7360 | test_loss 1.0552 | test_acc 0.6599 | lr 0.0336
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 91/256 | train_loss 1.0101 | train_acc 0.7100 | test_loss 1.0736 | test_acc 0.6409 | lr 0.0324
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 92/256 | train_loss 0.9453 | train_acc 0.6560 | test_loss 0.9862 | test_acc 0.6624 | lr 0.0313
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 93/256 | train_loss 0.5413 | train_acc 0.8220 | test_loss 1.0098 | test_acc 0.6725 | lr 0.0301
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 94/256 | train_loss 0.6552 | train_acc 0.8260 | test_loss 1.0160 | test_acc 0.6727 | lr 0.0289
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 95/256 | train_loss 0.7391 | train_acc 0.8000 | test_loss 1.1395 | test_acc 0.6289 | lr 0.0277
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 96/256 | train_loss 0.4825 | train_acc 0.8640 | test_loss 1.0774 | test_acc 0.6617 | lr 0.0265
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 97/256 | train_loss 0.7580 | train_acc 0.7400 | test_loss 1.0951 | test_acc 0.6550 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 98/256 | train_loss 0.8692 | train_acc 0.7940 | test_loss 1.1992 | test_acc 0.6229 | lr 0.0240
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 99/256 | train_loss 0.8304 | train_acc 0.7760 | test_loss 1.2999 | test_acc 0.5909 | lr 0.0228
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 100/256 | train_loss 0.6396 | train_acc 0.8800 | test_loss 1.0674 | test_acc 0.6646 | lr 0.0216
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 101/256 | train_loss 0.5567 | train_acc 0.8660 | test_loss 0.9840 | test_acc 0.6894 | lr 0.0204
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 102/256 | train_loss 0.7707 | train_acc 0.7800 | test_loss 1.0301 | test_acc 0.6650 | lr 0.0192
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 103/256 | train_loss 0.6896 | train_acc 0.7680 | test_loss 1.0471 | test_acc 0.6583 | lr 0.0181
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 104/256 | train_loss 0.5986 | train_acc 0.8320 | test_loss 0.9774 | test_acc 0.6776 | lr 0.0169
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 105/256 | train_loss 0.5187 | train_acc 0.8440 | test_loss 0.9846 | test_acc 0.6831 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 106/256 | train_loss 0.6848 | train_acc 0.8220 | test_loss 0.9663 | test_acc 0.6879 | lr 0.0147
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 107/256 | train_loss 0.6490 | train_acc 0.8640 | test_loss 0.9704 | test_acc 0.6881 | lr 0.0136
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 108/256 | train_loss 0.7054 | train_acc 0.8100 | test_loss 0.9560 | test_acc 0.6916 | lr 0.0125
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 109/256 | train_loss 0.7562 | train_acc 0.7360 | test_loss 0.9653 | test_acc 0.6794 | lr 0.0115
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 110/256 | train_loss 0.8863 | train_acc 0.7340 | test_loss 0.9679 | test_acc 0.6750 | lr 0.0105
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 111/256 | train_loss 0.6254 | train_acc 0.8160 | test_loss 0.9253 | test_acc 0.6950 | lr 0.0095
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 112/256 | train_loss 0.6685 | train_acc 0.7860 | test_loss 0.9525 | test_acc 0.6863 | lr 0.0086
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 113/256 | train_loss 0.8282 | train_acc 0.7380 | test_loss 0.9537 | test_acc 0.6810 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 114/256 | train_loss 0.4531 | train_acc 0.8840 | test_loss 0.9243 | test_acc 0.6941 | lr 0.0069
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 115/256 | train_loss 0.6144 | train_acc 0.8660 | test_loss 0.9263 | test_acc 0.6949 | lr 0.0061
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 116/256 | train_loss 0.8608 | train_acc 0.8120 | test_loss 0.9299 | test_acc 0.6950 | lr 0.0054
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 117/256 | train_loss 0.8356 | train_acc 0.8260 | test_loss 0.9289 | test_acc 0.6919 | lr 0.0047
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 118/256 | train_loss 0.5002 | train_acc 0.8080 | test_loss 0.9273 | test_acc 0.6959 | lr 0.0040
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 119/256 | train_loss 0.6799 | train_acc 0.7880 | test_loss 0.9307 | test_acc 0.6949 | lr 0.0034
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 120/256 | train_loss 0.8672 | train_acc 0.7000 | test_loss 0.9267 | test_acc 0.6923 | lr 0.0029
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 121/256 | train_loss 0.4052 | train_acc 0.9260 | test_loss 0.9282 | test_acc 0.6963 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 122/256 | train_loss 0.6936 | train_acc 0.8320 | test_loss 0.9235 | test_acc 0.6987 | lr 0.0019
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 123/256 | train_loss 0.7194 | train_acc 0.7340 | test_loss 0.9153 | test_acc 0.6999 | lr 0.0016
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 124/256 | train_loss 0.3455 | train_acc 0.9160 | test_loss 0.9277 | test_acc 0.7013 | lr 0.0012
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 125/256 | train_loss 0.5072 | train_acc 0.9120 | test_loss 0.9318 | test_acc 0.6973 | lr 0.0010
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 126/256 | train_loss 0.6524 | train_acc 0.7620 | test_loss 0.9303 | test_acc 0.6939 | lr 0.0008
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 127/256 | train_loss 0.8859 | train_acc 0.7860 | test_loss 0.9187 | test_acc 0.6979 | lr 0.0006
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 128/256 | train_loss 0.7006 | train_acc 0.8580 | test_loss 0.9221 | test_acc 0.6990 | lr 0.0005
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 129/256 | train_loss 0.7427 | train_acc 0.8580 | test_loss 1.0033 | test_acc 0.6663 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 130/256 | train_loss 0.6573 | train_acc 0.8200 | test_loss 1.2288 | test_acc 0.6341 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 131/256 | train_loss 0.7456 | train_acc 0.8140 | test_loss 1.2649 | test_acc 0.6134 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 132/256 | train_loss 0.7726 | train_acc 0.8040 | test_loss 1.3103 | test_acc 0.5960 | lr 0.0499
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 133/256 | train_loss 0.8203 | train_acc 0.6740 | test_loss 1.1153 | test_acc 0.6400 | lr 0.0499
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 134/256 | train_loss 1.0819 | train_acc 0.7500 | test_loss 1.2567 | test_acc 0.5978 | lr 0.0498
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 135/256 | train_loss 0.6389 | train_acc 0.8380 | test_loss 1.2601 | test_acc 0.6152 | lr 0.0497
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 136/256 | train_loss 0.9807 | train_acc 0.6660 | test_loss 1.1486 | test_acc 0.6331 | lr 0.0496
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 137/256 | train_loss 0.7382 | train_acc 0.7540 | test_loss 1.2018 | test_acc 0.5988 | lr 0.0495
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 138/256 | train_loss 0.6927 | train_acc 0.8200 | test_loss 1.3032 | test_acc 0.5871 | lr 0.0494
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 139/256 | train_loss 0.6544 | train_acc 0.8440 | test_loss 1.4725 | test_acc 0.5877 | lr 0.0493
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 140/256 | train_loss 0.8938 | train_acc 0.6440 | test_loss 1.2156 | test_acc 0.5955 | lr 0.0491
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 141/256 | train_loss 0.6818 | train_acc 0.7660 | test_loss 1.5256 | test_acc 0.5683 | lr 0.0489
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 142/256 | train_loss 0.8826 | train_acc 0.7360 | test_loss 1.2841 | test_acc 0.5893 | lr 0.0488
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 143/256 | train_loss 0.9892 | train_acc 0.5880 | test_loss 1.0678 | test_acc 0.6410 | lr 0.0486
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 144/256 | train_loss 0.8957 | train_acc 0.7220 | test_loss 1.1018 | test_acc 0.6231 | lr 0.0483
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 145/256 | train_loss 0.4940 | train_acc 0.8840 | test_loss 1.2560 | test_acc 0.6162 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 146/256 | train_loss 0.7288 | train_acc 0.8140 | test_loss 1.0320 | test_acc 0.6713 | lr 0.0479
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 147/256 | train_loss 0.6813 | train_acc 0.7740 | test_loss 1.2222 | test_acc 0.6124 | lr 0.0476
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 148/256 | train_loss 0.8781 | train_acc 0.7480 | test_loss 1.0594 | test_acc 0.6500 | lr 0.0474
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 149/256 | train_loss 0.5863 | train_acc 0.8400 | test_loss 1.1080 | test_acc 0.6445 | lr 0.0471
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 150/256 | train_loss 0.8215 | train_acc 0.7640 | test_loss 1.3699 | test_acc 0.5827 | lr 0.0468
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 151/256 | train_loss 0.8235 | train_acc 0.7540 | test_loss 1.0942 | test_acc 0.6408 | lr 0.0465
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 152/256 | train_loss 0.7419 | train_acc 0.7160 | test_loss 1.3243 | test_acc 0.5860 | lr 0.0462
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 153/256 | train_loss 0.8707 | train_acc 0.7500 | test_loss 1.1171 | test_acc 0.6368 | lr 0.0458
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 154/256 | train_loss 0.7892 | train_acc 0.7760 | test_loss 1.1205 | test_acc 0.6350 | lr 0.0455
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 155/256 | train_loss 0.6615 | train_acc 0.8300 | test_loss 1.1059 | test_acc 0.6391 | lr 0.0451
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 156/256 | train_loss 0.7856 | train_acc 0.7240 | test_loss 1.0917 | test_acc 0.6460 | lr 0.0448
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 157/256 | train_loss 0.5040 | train_acc 0.8120 | test_loss 1.1311 | test_acc 0.6569 | lr 0.0444
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 158/256 | train_loss 0.9908 | train_acc 0.6280 | test_loss 1.2122 | test_acc 0.5994 | lr 0.0440
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 159/256 | train_loss 0.6759 | train_acc 0.7840 | test_loss 1.2941 | test_acc 0.5906 | lr 0.0436
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 160/256 | train_loss 0.4974 | train_acc 0.8320 | test_loss 1.2223 | test_acc 0.6308 | lr 0.0432
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 161/256 | train_loss 0.5665 | train_acc 0.8100 | test_loss 1.2198 | test_acc 0.6496 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 162/256 | train_loss 0.5502 | train_acc 0.8260 | test_loss 1.1526 | test_acc 0.6466 | lr 0.0423
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 163/256 | train_loss 0.6319 | train_acc 0.8920 | test_loss 1.1113 | test_acc 0.6492 | lr 0.0419
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 164/256 | train_loss 0.6097 | train_acc 0.7800 | test_loss 1.1291 | test_acc 0.6351 | lr 0.0414
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 165/256 | train_loss 0.5510 | train_acc 0.7820 | test_loss 1.2826 | test_acc 0.6209 | lr 0.0410
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 166/256 | train_loss 0.5638 | train_acc 0.7920 | test_loss 1.3570 | test_acc 0.5744 | lr 0.0405
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 167/256 | train_loss 0.6285 | train_acc 0.8060 | test_loss 1.1194 | test_acc 0.6552 | lr 0.0400
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 168/256 | train_loss 0.8728 | train_acc 0.7340 | test_loss 1.2635 | test_acc 0.5965 | lr 0.0395
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 169/256 | train_loss 0.7138 | train_acc 0.7340 | test_loss 1.1173 | test_acc 0.6384 | lr 0.0390
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 170/256 | train_loss 0.7842 | train_acc 0.7760 | test_loss 1.0414 | test_acc 0.6529 | lr 0.0385
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 171/256 | train_loss 0.5271 | train_acc 0.8300 | test_loss 1.1594 | test_acc 0.6464 | lr 0.0380
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 172/256 | train_loss 0.6653 | train_acc 0.8280 | test_loss 1.0148 | test_acc 0.6783 | lr 0.0374
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 173/256 | train_loss 0.8458 | train_acc 0.8020 | test_loss 1.1027 | test_acc 0.6573 | lr 0.0369
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 174/256 | train_loss 0.7233 | train_acc 0.7600 | test_loss 1.1532 | test_acc 0.6344 | lr 0.0364
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 175/256 | train_loss 0.5037 | train_acc 0.8500 | test_loss 1.1700 | test_acc 0.6464 | lr 0.0358
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 176/256 | train_loss 0.6492 | train_acc 0.8520 | test_loss 1.2638 | test_acc 0.6219 | lr 0.0353
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 177/256 | train_loss 0.8535 | train_acc 0.6600 | test_loss 1.2225 | test_acc 0.5970 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 178/256 | train_loss 0.6164 | train_acc 0.8060 | test_loss 1.1676 | test_acc 0.6176 | lr 0.0342
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 179/256 | train_loss 0.5849 | train_acc 0.8940 | test_loss 1.0076 | test_acc 0.6746 | lr 0.0336
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 180/256 | train_loss 0.8415 | train_acc 0.7200 | test_loss 1.1364 | test_acc 0.6404 | lr 0.0330
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 181/256 | train_loss 0.4821 | train_acc 0.8960 | test_loss 1.4058 | test_acc 0.6055 | lr 0.0324
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 182/256 | train_loss 0.8258 | train_acc 0.7900 | test_loss 1.0429 | test_acc 0.6671 | lr 0.0319
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 183/256 | train_loss 1.0280 | train_acc 0.6600 | test_loss 1.2447 | test_acc 0.5944 | lr 0.0313
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 184/256 | train_loss 0.9562 | train_acc 0.7340 | test_loss 1.0891 | test_acc 0.6332 | lr 0.0307
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 185/256 | train_loss 0.6941 | train_acc 0.8020 | test_loss 0.9507 | test_acc 0.6901 | lr 0.0301
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 186/256 | train_loss 1.0440 | train_acc 0.6820 | test_loss 0.9618 | test_acc 0.6826 | lr 0.0295
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 187/256 | train_loss 0.7336 | train_acc 0.6720 | test_loss 0.9562 | test_acc 0.6935 | lr 0.0289
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 188/256 | train_loss 0.7177 | train_acc 0.7420 | test_loss 1.0264 | test_acc 0.6669 | lr 0.0283
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 189/256 | train_loss 0.7199 | train_acc 0.7940 | test_loss 0.9877 | test_acc 0.6833 | lr 0.0277
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 190/256 | train_loss 0.4884 | train_acc 0.8960 | test_loss 0.9589 | test_acc 0.6981 | lr 0.0271
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 191/256 | train_loss 0.3862 | train_acc 0.9180 | test_loss 1.0936 | test_acc 0.6691 | lr 0.0265
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 192/256 | train_loss 0.7199 | train_acc 0.8620 | test_loss 0.9817 | test_acc 0.6826 | lr 0.0259
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 193/256 | train_loss 0.3505 | train_acc 0.8360 | test_loss 1.1106 | test_acc 0.6663 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 194/256 | train_loss 0.4792 | train_acc 0.9040 | test_loss 1.0922 | test_acc 0.6881 | lr 0.0246
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 195/256 | train_loss 0.6857 | train_acc 0.8060 | test_loss 1.1184 | test_acc 0.6569 | lr 0.0240
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 196/256 | train_loss 0.5243 | train_acc 0.8860 | test_loss 1.0144 | test_acc 0.6791 | lr 0.0234
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 197/256 | train_loss 0.6105 | train_acc 0.8140 | test_loss 1.0110 | test_acc 0.6791 | lr 0.0228
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 198/256 | train_loss 0.4221 | train_acc 0.8800 | test_loss 1.0466 | test_acc 0.6910 | lr 0.0222
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 199/256 | train_loss 0.6996 | train_acc 0.7360 | test_loss 1.0097 | test_acc 0.6870 | lr 0.0216
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 200/256 | train_loss 0.6155 | train_acc 0.8600 | test_loss 0.9487 | test_acc 0.6989 | lr 0.0210
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 201/256 | train_loss 0.4382 | train_acc 0.8940 | test_loss 1.0081 | test_acc 0.6857 | lr 0.0204
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 202/256 | train_loss 0.5405 | train_acc 0.8740 | test_loss 1.0444 | test_acc 0.6925 | lr 0.0198
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 203/256 | train_loss 0.7561 | train_acc 0.6880 | test_loss 1.0242 | test_acc 0.6676 | lr 0.0192
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 204/256 | train_loss 0.8165 | train_acc 0.8060 | test_loss 0.9949 | test_acc 0.6787 | lr 0.0186
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 205/256 | train_loss 0.7182 | train_acc 0.7520 | test_loss 0.9786 | test_acc 0.6833 | lr 0.0181
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 206/256 | train_loss 0.5493 | train_acc 0.8580 | test_loss 0.9446 | test_acc 0.6993 | lr 0.0175
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 207/256 | train_loss 0.5597 | train_acc 0.7780 | test_loss 1.0477 | test_acc 0.6770 | lr 0.0169
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 208/256 | train_loss 0.5919 | train_acc 0.8500 | test_loss 1.0730 | test_acc 0.6584 | lr 0.0163
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 209/256 | train_loss 0.7473 | train_acc 0.8500 | test_loss 1.0921 | test_acc 0.6489 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 210/256 | train_loss 0.4892 | train_acc 0.8300 | test_loss 0.9709 | test_acc 0.6883 | lr 0.0152
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 211/256 | train_loss 0.7394 | train_acc 0.8000 | test_loss 0.9666 | test_acc 0.6883 | lr 0.0147
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 212/256 | train_loss 0.5355 | train_acc 0.8460 | test_loss 0.9335 | test_acc 0.7044 | lr 0.0141
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 213/256 | train_loss 0.6278 | train_acc 0.7880 | test_loss 0.9506 | test_acc 0.6990 | lr 0.0136
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 214/256 | train_loss 0.7480 | train_acc 0.7240 | test_loss 0.9802 | test_acc 0.6844 | lr 0.0131
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 215/256 | train_loss 0.6296 | train_acc 0.8080 | test_loss 1.0579 | test_acc 0.6663 | lr 0.0125
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 216/256 | train_loss 0.5300 | train_acc 0.8580 | test_loss 1.0132 | test_acc 0.6825 | lr 0.0120
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 217/256 | train_loss 0.3989 | train_acc 0.8760 | test_loss 1.0194 | test_acc 0.6853 | lr 0.0115
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 218/256 | train_loss 0.4371 | train_acc 0.9140 | test_loss 0.9967 | test_acc 0.6935 | lr 0.0110
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 219/256 | train_loss 0.4506 | train_acc 0.8820 | test_loss 0.9670 | test_acc 0.7067 | lr 0.0105
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 220/256 | train_loss 0.5214 | train_acc 0.8000 | test_loss 0.9733 | test_acc 0.6993 | lr 0.0100
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 221/256 | train_loss 0.6801 | train_acc 0.8580 | test_loss 0.9682 | test_acc 0.6993 | lr 0.0095
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 222/256 | train_loss 0.4921 | train_acc 0.7700 | test_loss 0.9353 | test_acc 0.7035 | lr 0.0091
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 223/256 | train_loss 0.3835 | train_acc 0.9040 | test_loss 0.9237 | test_acc 0.7139 | lr 0.0086
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 224/256 | train_loss 0.3751 | train_acc 0.8440 | test_loss 0.9499 | test_acc 0.7125 | lr 0.0082
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 225/256 | train_loss 0.6115 | train_acc 0.8200 | test_loss 0.9884 | test_acc 0.7016 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 226/256 | train_loss 0.7177 | train_acc 0.7780 | test_loss 0.9823 | test_acc 0.6986 | lr 0.0073
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 227/256 | train_loss 0.4925 | train_acc 0.8660 | test_loss 0.9840 | test_acc 0.6929 | lr 0.0069
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 228/256 | train_loss 0.7862 | train_acc 0.8080 | test_loss 0.9370 | test_acc 0.7043 | lr 0.0065
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 229/256 | train_loss 0.6930 | train_acc 0.7940 | test_loss 0.9107 | test_acc 0.7094 | lr 0.0061
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 230/256 | train_loss 0.5044 | train_acc 0.8440 | test_loss 0.9503 | test_acc 0.7016 | lr 0.0057
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 231/256 | train_loss 0.3764 | train_acc 0.9240 | test_loss 0.9695 | test_acc 0.6999 | lr 0.0054
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 232/256 | train_loss 0.2678 | train_acc 0.9160 | test_loss 0.9785 | test_acc 0.7075 | lr 0.0050
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 233/256 | train_loss 0.6799 | train_acc 0.8160 | test_loss 0.9498 | test_acc 0.7055 | lr 0.0047
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 234/256 | train_loss 0.4949 | train_acc 0.8740 | test_loss 0.9428 | test_acc 0.7051 | lr 0.0043
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 235/256 | train_loss 0.4850 | train_acc 0.9020 | test_loss 0.9662 | test_acc 0.7037 | lr 0.0040
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 236/256 | train_loss 0.6307 | train_acc 0.7560 | test_loss 0.9475 | test_acc 0.7043 | lr 0.0037
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 237/256 | train_loss 0.3328 | train_acc 0.9140 | test_loss 1.0218 | test_acc 0.6969 | lr 0.0034
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 238/256 | train_loss 0.5427 | train_acc 0.8260 | test_loss 0.9708 | test_acc 0.7047 | lr 0.0031
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 239/256 | train_loss 0.3070 | train_acc 0.9100 | test_loss 0.9723 | test_acc 0.7066 | lr 0.0029
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 240/256 | train_loss 0.7780 | train_acc 0.6960 | test_loss 0.9261 | test_acc 0.7074 | lr 0.0026
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 241/256 | train_loss 0.4323 | train_acc 0.8920 | test_loss 0.9400 | test_acc 0.7093 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 242/256 | train_loss 0.6013 | train_acc 0.7880 | test_loss 0.9352 | test_acc 0.7051 | lr 0.0022
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 243/256 | train_loss 0.4161 | train_acc 0.8640 | test_loss 0.9570 | test_acc 0.7044 | lr 0.0019
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 244/256 | train_loss 0.4923 | train_acc 0.7700 | test_loss 0.9506 | test_acc 0.7029 | lr 0.0017
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 245/256 | train_loss 0.5576 | train_acc 0.8700 | test_loss 0.9406 | test_acc 0.7076 | lr 0.0016
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 246/256 | train_loss 0.7375 | train_acc 0.8280 | test_loss 0.9313 | test_acc 0.7074 | lr 0.0014
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 247/256 | train_loss 0.4984 | train_acc 0.8580 | test_loss 0.9270 | test_acc 0.7064 | lr 0.0012
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 248/256 | train_loss 0.3696 | train_acc 0.9040 | test_loss 0.9469 | test_acc 0.7096 | lr 0.0011
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 249/256 | train_loss 0.6537 | train_acc 0.7880 | test_loss 0.9329 | test_acc 0.7077 | lr 0.0010
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 250/256 | train_loss 0.9759 | train_acc 0.6740 | test_loss 0.9395 | test_acc 0.7051 | lr 0.0009
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 251/256 | train_loss 0.7317 | train_acc 0.7780 | test_loss 0.9257 | test_acc 0.7059 | lr 0.0008
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 252/256 | train_loss 0.6665 | train_acc 0.8540 | test_loss 0.9295 | test_acc 0.7067 | lr 0.0007
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 253/256 | train_loss 0.4435 | train_acc 0.8520 | test_loss 0.9326 | test_acc 0.7094 | lr 0.0006
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 254/256 | train_loss 0.2754 | train_acc 0.9400 | test_loss 0.9842 | test_acc 0.7061 | lr 0.0006
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 255/256 | train_loss 0.5474 | train_acc 0.9080 | test_loss 0.9600 | test_acc 0.7093 | lr 0.0005
+[INFO] rainbow_memory.py:184 > Task 3 | Epoch 256/256 | train_loss 0.5038 | train_acc 0.8860 | test_loss 0.9283 | test_acc 0.7129 | lr 0.0005
+[INFO] finetune.py:157 > Apply after_task
+[WARNING] finetune.py:230 > Already updated the memory during this iter (3)
+[INFO] main.py:398 > [2-4] Update the information for the current task
+[INFO] finetune.py:157 > Apply after_task
+[WARNING] finetune.py:230 > Already updated the memory during this iter (3)
+[INFO] main.py:405 > [2-5] Report task result
+[INFO] main.py:316 > [2-1] Prepare a datalist for the current task
+[INFO] main.py:349 > [2-2] Set environment for the current task
+[INFO] finetune.py:104 > Apply before_task
+[INFO] finetune.py:146 > Reset the optimizer and scheduler states
+[INFO] finetune.py:152 > Increasing the head of fc 10 -> 10
+[INFO] main.py:357 > [2-3] Start to train under online
+[INFO] main.py:372 > Train over streamed data once
+[INFO] rainbow_memory.py:120 > Streamed samples: 800
+[INFO] rainbow_memory.py:121 > In-memory samples: 500
+[INFO] rainbow_memory.py:122 > Pseudo samples: 9984
+[INFO] rainbow_memory.py:128 > Train samples: 11284
+[INFO] rainbow_memory.py:129 > Test samples: 10000
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 1/1 | train_loss 0.5345 | train_acc 0.7349 | test_loss 6.9268 | test_acc 0.1896 | lr 0.0050
+[INFO] finetune.py:169 > Update memory over 10 classes by uncertainty
+[INFO] finetune.py:679 > Compute uncertainty by vr_randaug!
+[INFO] finetune.py:223 > Memory statistic
+[INFO] finetune.py:225 > 
+dog           50
+deer          50
+automobile    50
+bird          50
+truck         50
+frog          50
+horse         50
+airplane      50
+cat           50
+ship          50
+Name: klass, dtype: int64
+[INFO] main.py:388 > Train over memory
+[INFO] rainbow_memory.py:120 > Streamed samples: 0
+[INFO] rainbow_memory.py:121 > In-memory samples: 500
+[INFO] rainbow_memory.py:122 > Pseudo samples: 0
+[INFO] rainbow_memory.py:128 > Train samples: 500
+[INFO] rainbow_memory.py:129 > Test samples: 10000
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 1/256 | train_loss 3.7023 | train_acc 0.1720 | test_loss 2.4576 | test_acc 0.1856 | lr 0.0050
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 2/256 | train_loss 2.0916 | train_acc 0.5000 | test_loss 2.2914 | test_acc 0.5325 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 3/256 | train_loss 1.9559 | train_acc 0.6400 | test_loss 2.0454 | test_acc 0.5298 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 4/256 | train_loss 1.6953 | train_acc 0.6460 | test_loss 1.7990 | test_acc 0.4914 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 5/256 | train_loss 1.3825 | train_acc 0.6640 | test_loss 1.9517 | test_acc 0.3626 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 6/256 | train_loss 1.2018 | train_acc 0.6440 | test_loss 1.6488 | test_acc 0.4595 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 7/256 | train_loss 1.0922 | train_acc 0.6740 | test_loss 1.3919 | test_acc 0.5314 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 8/256 | train_loss 1.0700 | train_acc 0.7080 | test_loss 1.3484 | test_acc 0.5422 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 9/256 | train_loss 1.1388 | train_acc 0.6520 | test_loss 1.8197 | test_acc 0.4579 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 10/256 | train_loss 1.2646 | train_acc 0.5660 | test_loss 1.4582 | test_acc 0.4954 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 11/256 | train_loss 0.9040 | train_acc 0.7020 | test_loss 1.3980 | test_acc 0.5228 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 12/256 | train_loss 0.9595 | train_acc 0.6880 | test_loss 1.3431 | test_acc 0.5390 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 13/256 | train_loss 0.9208 | train_acc 0.6960 | test_loss 1.3069 | test_acc 0.5608 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 14/256 | train_loss 0.8405 | train_acc 0.7660 | test_loss 1.2906 | test_acc 0.5694 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 15/256 | train_loss 0.8218 | train_acc 0.7060 | test_loss 1.2020 | test_acc 0.5869 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 16/256 | train_loss 0.8967 | train_acc 0.7380 | test_loss 1.1867 | test_acc 0.5899 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 17/256 | train_loss 1.1658 | train_acc 0.6500 | test_loss 1.4717 | test_acc 0.5032 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 18/256 | train_loss 1.0589 | train_acc 0.6900 | test_loss 1.4418 | test_acc 0.5167 | lr 0.0495
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 19/256 | train_loss 1.1387 | train_acc 0.6540 | test_loss 1.4255 | test_acc 0.5292 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 20/256 | train_loss 1.1971 | train_acc 0.5740 | test_loss 1.4177 | test_acc 0.5248 | lr 0.0458
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 21/256 | train_loss 1.1582 | train_acc 0.6220 | test_loss 1.3254 | test_acc 0.5570 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 22/256 | train_loss 0.9775 | train_acc 0.7020 | test_loss 1.2407 | test_acc 0.5808 | lr 0.0390
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 23/256 | train_loss 0.8407 | train_acc 0.7440 | test_loss 1.2083 | test_acc 0.5916 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 24/256 | train_loss 1.1692 | train_acc 0.7000 | test_loss 1.2714 | test_acc 0.5739 | lr 0.0301
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 25/256 | train_loss 0.8614 | train_acc 0.7480 | test_loss 1.1992 | test_acc 0.5898 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 26/256 | train_loss 1.1299 | train_acc 0.7080 | test_loss 1.3066 | test_acc 0.5520 | lr 0.0204
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 27/256 | train_loss 0.9244 | train_acc 0.6860 | test_loss 1.1781 | test_acc 0.5978 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 28/256 | train_loss 1.0652 | train_acc 0.6280 | test_loss 1.1269 | test_acc 0.6162 | lr 0.0115
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 29/256 | train_loss 0.5432 | train_acc 0.8420 | test_loss 1.1250 | test_acc 0.6179 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 30/256 | train_loss 0.5516 | train_acc 0.8560 | test_loss 1.1424 | test_acc 0.6162 | lr 0.0047
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 31/256 | train_loss 0.6428 | train_acc 0.7520 | test_loss 1.1426 | test_acc 0.6171 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 32/256 | train_loss 0.9268 | train_acc 0.7000 | test_loss 1.1439 | test_acc 0.6178 | lr 0.0010
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 33/256 | train_loss 1.0467 | train_acc 0.7000 | test_loss 1.2776 | test_acc 0.5750 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 34/256 | train_loss 1.0400 | train_acc 0.6820 | test_loss 1.2812 | test_acc 0.5601 | lr 0.0499
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 35/256 | train_loss 1.0231 | train_acc 0.7300 | test_loss 1.5123 | test_acc 0.4971 | lr 0.0495
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 36/256 | train_loss 0.9256 | train_acc 0.7260 | test_loss 1.3772 | test_acc 0.5509 | lr 0.0489
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 37/256 | train_loss 0.8474 | train_acc 0.7800 | test_loss 1.3557 | test_acc 0.5658 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 38/256 | train_loss 1.0897 | train_acc 0.6340 | test_loss 1.2752 | test_acc 0.5751 | lr 0.0471
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 39/256 | train_loss 0.7524 | train_acc 0.7800 | test_loss 1.3507 | test_acc 0.5662 | lr 0.0458
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 40/256 | train_loss 0.8928 | train_acc 0.7540 | test_loss 1.5263 | test_acc 0.5204 | lr 0.0444
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 41/256 | train_loss 0.7587 | train_acc 0.7880 | test_loss 1.3817 | test_acc 0.5659 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 42/256 | train_loss 0.9010 | train_acc 0.7280 | test_loss 1.4151 | test_acc 0.5480 | lr 0.0410
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 43/256 | train_loss 0.8184 | train_acc 0.7680 | test_loss 1.3664 | test_acc 0.5605 | lr 0.0390
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 44/256 | train_loss 0.8891 | train_acc 0.7780 | test_loss 1.5516 | test_acc 0.5225 | lr 0.0369
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 45/256 | train_loss 0.6927 | train_acc 0.8260 | test_loss 1.4226 | test_acc 0.5484 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 46/256 | train_loss 0.7828 | train_acc 0.7540 | test_loss 1.2873 | test_acc 0.5860 | lr 0.0324
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 47/256 | train_loss 0.7929 | train_acc 0.7920 | test_loss 1.1821 | test_acc 0.6156 | lr 0.0301
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 48/256 | train_loss 0.6525 | train_acc 0.7980 | test_loss 1.4334 | test_acc 0.5513 | lr 0.0277
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 49/256 | train_loss 0.6960 | train_acc 0.7520 | test_loss 1.2040 | test_acc 0.6138 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 50/256 | train_loss 1.0970 | train_acc 0.6360 | test_loss 1.2633 | test_acc 0.5890 | lr 0.0228
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 51/256 | train_loss 0.9609 | train_acc 0.6980 | test_loss 1.1942 | test_acc 0.6025 | lr 0.0204
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 52/256 | train_loss 0.9709 | train_acc 0.7680 | test_loss 1.1585 | test_acc 0.6125 | lr 0.0181
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 53/256 | train_loss 1.0886 | train_acc 0.6600 | test_loss 1.2149 | test_acc 0.5940 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 54/256 | train_loss 0.5931 | train_acc 0.8640 | test_loss 1.1298 | test_acc 0.6330 | lr 0.0136
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 55/256 | train_loss 0.9419 | train_acc 0.7280 | test_loss 1.1157 | test_acc 0.6324 | lr 0.0115
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 56/256 | train_loss 0.6955 | train_acc 0.8160 | test_loss 1.1687 | test_acc 0.6224 | lr 0.0095
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 57/256 | train_loss 0.5171 | train_acc 0.8800 | test_loss 1.1587 | test_acc 0.6296 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 58/256 | train_loss 0.6992 | train_acc 0.8100 | test_loss 1.1295 | test_acc 0.6370 | lr 0.0061
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 59/256 | train_loss 0.7951 | train_acc 0.7720 | test_loss 1.1463 | test_acc 0.6359 | lr 0.0047
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 60/256 | train_loss 0.8256 | train_acc 0.7800 | test_loss 1.1485 | test_acc 0.6367 | lr 0.0034
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 61/256 | train_loss 0.7671 | train_acc 0.7020 | test_loss 1.1174 | test_acc 0.6377 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 62/256 | train_loss 0.6338 | train_acc 0.8380 | test_loss 1.1407 | test_acc 0.6366 | lr 0.0016
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 63/256 | train_loss 0.5784 | train_acc 0.8600 | test_loss 1.1547 | test_acc 0.6355 | lr 0.0010
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 64/256 | train_loss 0.6670 | train_acc 0.8200 | test_loss 1.1664 | test_acc 0.6350 | lr 0.0006
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 65/256 | train_loss 0.7301 | train_acc 0.7400 | test_loss 1.4192 | test_acc 0.5416 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 66/256 | train_loss 1.2154 | train_acc 0.6260 | test_loss 1.3592 | test_acc 0.5661 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 67/256 | train_loss 0.9042 | train_acc 0.7180 | test_loss 1.3105 | test_acc 0.5835 | lr 0.0499
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 68/256 | train_loss 0.7716 | train_acc 0.8140 | test_loss 1.4590 | test_acc 0.5499 | lr 0.0497
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 69/256 | train_loss 0.7571 | train_acc 0.7820 | test_loss 1.5442 | test_acc 0.5499 | lr 0.0495
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 70/256 | train_loss 0.7170 | train_acc 0.8200 | test_loss 1.7610 | test_acc 0.5116 | lr 0.0493
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 71/256 | train_loss 1.1363 | train_acc 0.6620 | test_loss 1.6274 | test_acc 0.4952 | lr 0.0489
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 72/256 | train_loss 0.9842 | train_acc 0.7480 | test_loss 1.3219 | test_acc 0.5594 | lr 0.0486
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 73/256 | train_loss 1.0039 | train_acc 0.6840 | test_loss 1.4631 | test_acc 0.5277 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 74/256 | train_loss 0.8019 | train_acc 0.7760 | test_loss 1.5362 | test_acc 0.5274 | lr 0.0476
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 75/256 | train_loss 0.9760 | train_acc 0.6880 | test_loss 1.2964 | test_acc 0.5787 | lr 0.0471
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 76/256 | train_loss 0.7940 | train_acc 0.8280 | test_loss 1.4167 | test_acc 0.5543 | lr 0.0465
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 77/256 | train_loss 0.8223 | train_acc 0.7900 | test_loss 1.4355 | test_acc 0.5428 | lr 0.0458
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 78/256 | train_loss 0.9142 | train_acc 0.7320 | test_loss 1.2326 | test_acc 0.6063 | lr 0.0451
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 79/256 | train_loss 0.8930 | train_acc 0.7720 | test_loss 1.3449 | test_acc 0.5726 | lr 0.0444
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 80/256 | train_loss 0.8317 | train_acc 0.7920 | test_loss 1.2983 | test_acc 0.5792 | lr 0.0436
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 81/256 | train_loss 0.7133 | train_acc 0.7880 | test_loss 1.6534 | test_acc 0.5063 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 82/256 | train_loss 0.8608 | train_acc 0.7500 | test_loss 1.4242 | test_acc 0.5548 | lr 0.0419
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 83/256 | train_loss 0.6208 | train_acc 0.8740 | test_loss 1.6019 | test_acc 0.5559 | lr 0.0410
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 84/256 | train_loss 0.8484 | train_acc 0.8060 | test_loss 1.3102 | test_acc 0.5885 | lr 0.0400
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 85/256 | train_loss 0.6978 | train_acc 0.8580 | test_loss 1.3283 | test_acc 0.5864 | lr 0.0390
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 86/256 | train_loss 0.7840 | train_acc 0.8180 | test_loss 1.3280 | test_acc 0.5909 | lr 0.0380
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 87/256 | train_loss 0.6995 | train_acc 0.7680 | test_loss 1.3175 | test_acc 0.5932 | lr 0.0369
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 88/256 | train_loss 0.5579 | train_acc 0.8100 | test_loss 1.3507 | test_acc 0.5821 | lr 0.0358
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 89/256 | train_loss 0.9116 | train_acc 0.7380 | test_loss 1.5163 | test_acc 0.5268 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 90/256 | train_loss 0.7664 | train_acc 0.7640 | test_loss 1.3080 | test_acc 0.5813 | lr 0.0336
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 91/256 | train_loss 0.7094 | train_acc 0.8280 | test_loss 1.2499 | test_acc 0.6062 | lr 0.0324
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 92/256 | train_loss 0.9280 | train_acc 0.6380 | test_loss 1.2620 | test_acc 0.5964 | lr 0.0313
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 93/256 | train_loss 0.8982 | train_acc 0.7020 | test_loss 1.3385 | test_acc 0.5890 | lr 0.0301
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 94/256 | train_loss 0.7562 | train_acc 0.7980 | test_loss 1.3468 | test_acc 0.5720 | lr 0.0289
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 95/256 | train_loss 0.8287 | train_acc 0.7420 | test_loss 1.2498 | test_acc 0.6139 | lr 0.0277
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 96/256 | train_loss 1.0636 | train_acc 0.6080 | test_loss 1.2993 | test_acc 0.5808 | lr 0.0265
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 97/256 | train_loss 0.8569 | train_acc 0.8100 | test_loss 1.2449 | test_acc 0.5992 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 98/256 | train_loss 0.6342 | train_acc 0.8360 | test_loss 1.1987 | test_acc 0.6205 | lr 0.0240
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 99/256 | train_loss 0.7866 | train_acc 0.7680 | test_loss 1.2263 | test_acc 0.6090 | lr 0.0228
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 100/256 | train_loss 0.6169 | train_acc 0.8740 | test_loss 1.2799 | test_acc 0.5965 | lr 0.0216
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 101/256 | train_loss 0.7982 | train_acc 0.6740 | test_loss 1.2367 | test_acc 0.6182 | lr 0.0204
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 102/256 | train_loss 0.6053 | train_acc 0.8640 | test_loss 1.3110 | test_acc 0.6054 | lr 0.0192
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 103/256 | train_loss 0.6027 | train_acc 0.8600 | test_loss 1.2741 | test_acc 0.6016 | lr 0.0181
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 104/256 | train_loss 0.4441 | train_acc 0.8960 | test_loss 1.2321 | test_acc 0.6184 | lr 0.0169
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 105/256 | train_loss 1.0466 | train_acc 0.6860 | test_loss 1.2231 | test_acc 0.6118 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 106/256 | train_loss 0.6960 | train_acc 0.8420 | test_loss 1.2901 | test_acc 0.6059 | lr 0.0147
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 107/256 | train_loss 0.8896 | train_acc 0.6680 | test_loss 1.2018 | test_acc 0.6167 | lr 0.0136
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 108/256 | train_loss 0.5431 | train_acc 0.8900 | test_loss 1.2111 | test_acc 0.6179 | lr 0.0125
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 109/256 | train_loss 0.5350 | train_acc 0.8520 | test_loss 1.2154 | test_acc 0.6208 | lr 0.0115
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 110/256 | train_loss 0.6871 | train_acc 0.8220 | test_loss 1.2695 | test_acc 0.6191 | lr 0.0105
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 111/256 | train_loss 0.6134 | train_acc 0.8080 | test_loss 1.2161 | test_acc 0.6225 | lr 0.0095
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 112/256 | train_loss 0.5468 | train_acc 0.8480 | test_loss 1.2361 | test_acc 0.6277 | lr 0.0086
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 113/256 | train_loss 0.8976 | train_acc 0.8620 | test_loss 1.1892 | test_acc 0.6289 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 114/256 | train_loss 0.7712 | train_acc 0.8380 | test_loss 1.1805 | test_acc 0.6263 | lr 0.0069
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 115/256 | train_loss 0.6147 | train_acc 0.8780 | test_loss 1.1778 | test_acc 0.6297 | lr 0.0061
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 116/256 | train_loss 0.4251 | train_acc 0.8800 | test_loss 1.1669 | test_acc 0.6341 | lr 0.0054
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 117/256 | train_loss 0.7793 | train_acc 0.7860 | test_loss 1.1670 | test_acc 0.6355 | lr 0.0047
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 118/256 | train_loss 0.5004 | train_acc 0.8840 | test_loss 1.1859 | test_acc 0.6326 | lr 0.0040
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 119/256 | train_loss 0.5992 | train_acc 0.8260 | test_loss 1.1835 | test_acc 0.6372 | lr 0.0034
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 120/256 | train_loss 0.4301 | train_acc 0.8820 | test_loss 1.2031 | test_acc 0.6371 | lr 0.0029
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 121/256 | train_loss 0.7139 | train_acc 0.8040 | test_loss 1.1758 | test_acc 0.6371 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 122/256 | train_loss 0.6595 | train_acc 0.8720 | test_loss 1.1645 | test_acc 0.6386 | lr 0.0019
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 123/256 | train_loss 0.7484 | train_acc 0.8020 | test_loss 1.1585 | test_acc 0.6393 | lr 0.0016
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 124/256 | train_loss 0.7451 | train_acc 0.7280 | test_loss 1.1444 | test_acc 0.6407 | lr 0.0012
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 125/256 | train_loss 0.8211 | train_acc 0.7600 | test_loss 1.1621 | test_acc 0.6410 | lr 0.0010
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 126/256 | train_loss 0.5123 | train_acc 0.9260 | test_loss 1.2145 | test_acc 0.6375 | lr 0.0008
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 127/256 | train_loss 0.8227 | train_acc 0.7560 | test_loss 1.1654 | test_acc 0.6391 | lr 0.0006
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 128/256 | train_loss 0.7138 | train_acc 0.7820 | test_loss 1.1849 | test_acc 0.6403 | lr 0.0005
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 129/256 | train_loss 0.6903 | train_acc 0.8200 | test_loss 1.3493 | test_acc 0.5866 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 130/256 | train_loss 0.5882 | train_acc 0.8880 | test_loss 1.3861 | test_acc 0.5674 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 131/256 | train_loss 1.1196 | train_acc 0.7440 | test_loss 1.8515 | test_acc 0.4533 | lr 0.0500
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 132/256 | train_loss 0.8409 | train_acc 0.7780 | test_loss 1.2785 | test_acc 0.5865 | lr 0.0499
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 133/256 | train_loss 0.6525 | train_acc 0.7600 | test_loss 1.6521 | test_acc 0.5338 | lr 0.0499
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 134/256 | train_loss 0.9654 | train_acc 0.6260 | test_loss 1.4165 | test_acc 0.5626 | lr 0.0498
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 135/256 | train_loss 0.8529 | train_acc 0.7840 | test_loss 1.2399 | test_acc 0.6034 | lr 0.0497
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 136/256 | train_loss 0.6318 | train_acc 0.8620 | test_loss 1.6144 | test_acc 0.5450 | lr 0.0496
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 137/256 | train_loss 0.8248 | train_acc 0.7600 | test_loss 1.4430 | test_acc 0.5616 | lr 0.0495
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 138/256 | train_loss 0.6946 | train_acc 0.7460 | test_loss 1.4151 | test_acc 0.5774 | lr 0.0494
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 139/256 | train_loss 0.6646 | train_acc 0.8460 | test_loss 1.4689 | test_acc 0.5766 | lr 0.0493
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 140/256 | train_loss 0.6945 | train_acc 0.7780 | test_loss 1.4251 | test_acc 0.5518 | lr 0.0491
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 141/256 | train_loss 0.7292 | train_acc 0.8280 | test_loss 1.5358 | test_acc 0.5146 | lr 0.0489
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 142/256 | train_loss 1.1122 | train_acc 0.7080 | test_loss 1.3072 | test_acc 0.5735 | lr 0.0488
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 143/256 | train_loss 0.7834 | train_acc 0.7960 | test_loss 1.3578 | test_acc 0.5750 | lr 0.0486
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 144/256 | train_loss 0.8809 | train_acc 0.8120 | test_loss 1.4718 | test_acc 0.5542 | lr 0.0483
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 145/256 | train_loss 0.7645 | train_acc 0.7640 | test_loss 1.3296 | test_acc 0.5922 | lr 0.0481
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 146/256 | train_loss 0.7495 | train_acc 0.8340 | test_loss 1.3548 | test_acc 0.5807 | lr 0.0479
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 147/256 | train_loss 0.9094 | train_acc 0.7300 | test_loss 1.5467 | test_acc 0.5192 | lr 0.0476
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 148/256 | train_loss 0.7531 | train_acc 0.7880 | test_loss 1.5291 | test_acc 0.5460 | lr 0.0474
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 149/256 | train_loss 1.0118 | train_acc 0.7960 | test_loss 1.3193 | test_acc 0.5760 | lr 0.0471
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 150/256 | train_loss 0.8234 | train_acc 0.7800 | test_loss 1.2445 | test_acc 0.6076 | lr 0.0468
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 151/256 | train_loss 0.8585 | train_acc 0.7080 | test_loss 1.4986 | test_acc 0.5515 | lr 0.0465
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 152/256 | train_loss 0.6284 | train_acc 0.8120 | test_loss 1.4924 | test_acc 0.5527 | lr 0.0462
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 153/256 | train_loss 0.5152 | train_acc 0.8780 | test_loss 1.7588 | test_acc 0.5186 | lr 0.0458
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 154/256 | train_loss 0.6634 | train_acc 0.7920 | test_loss 1.5519 | test_acc 0.5523 | lr 0.0455
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 155/256 | train_loss 0.9341 | train_acc 0.6600 | test_loss 1.4024 | test_acc 0.5675 | lr 0.0451
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 156/256 | train_loss 0.6461 | train_acc 0.8160 | test_loss 1.3582 | test_acc 0.5889 | lr 0.0448
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 157/256 | train_loss 0.8822 | train_acc 0.7280 | test_loss 1.2604 | test_acc 0.6087 | lr 0.0444
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 158/256 | train_loss 1.0943 | train_acc 0.6140 | test_loss 1.2483 | test_acc 0.6091 | lr 0.0440
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 159/256 | train_loss 0.6937 | train_acc 0.7680 | test_loss 1.2502 | test_acc 0.5991 | lr 0.0436
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 160/256 | train_loss 0.4838 | train_acc 0.9000 | test_loss 1.3188 | test_acc 0.6032 | lr 0.0432
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 161/256 | train_loss 0.7065 | train_acc 0.8160 | test_loss 1.4011 | test_acc 0.5499 | lr 0.0428
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 162/256 | train_loss 0.9380 | train_acc 0.7100 | test_loss 1.5242 | test_acc 0.5401 | lr 0.0423
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 163/256 | train_loss 0.6871 | train_acc 0.8280 | test_loss 1.3237 | test_acc 0.6015 | lr 0.0419
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 164/256 | train_loss 0.4513 | train_acc 0.8900 | test_loss 1.4221 | test_acc 0.6010 | lr 0.0414
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 165/256 | train_loss 0.8357 | train_acc 0.7800 | test_loss 1.6938 | test_acc 0.5290 | lr 0.0410
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 166/256 | train_loss 0.8824 | train_acc 0.7260 | test_loss 1.5069 | test_acc 0.5363 | lr 0.0405
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 167/256 | train_loss 0.8457 | train_acc 0.6920 | test_loss 1.3028 | test_acc 0.5836 | lr 0.0400
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 168/256 | train_loss 0.8688 | train_acc 0.7060 | test_loss 1.2001 | test_acc 0.6188 | lr 0.0395
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 169/256 | train_loss 0.8297 | train_acc 0.7520 | test_loss 1.2821 | test_acc 0.6010 | lr 0.0390
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 170/256 | train_loss 0.7002 | train_acc 0.8140 | test_loss 1.2771 | test_acc 0.5938 | lr 0.0385
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 171/256 | train_loss 0.6692 | train_acc 0.7580 | test_loss 1.3473 | test_acc 0.5923 | lr 0.0380
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 172/256 | train_loss 0.6344 | train_acc 0.7700 | test_loss 1.4634 | test_acc 0.5717 | lr 0.0374
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 173/256 | train_loss 0.9377 | train_acc 0.6420 | test_loss 1.3289 | test_acc 0.5806 | lr 0.0369
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 174/256 | train_loss 0.7246 | train_acc 0.7540 | test_loss 1.5266 | test_acc 0.5715 | lr 0.0364
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 175/256 | train_loss 0.2440 | train_acc 0.9640 | test_loss 1.4218 | test_acc 0.5926 | lr 0.0358
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 176/256 | train_loss 0.4946 | train_acc 0.8780 | test_loss 1.4887 | test_acc 0.5861 | lr 0.0353
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 177/256 | train_loss 0.5560 | train_acc 0.8280 | test_loss 1.4391 | test_acc 0.5796 | lr 0.0347
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 178/256 | train_loss 0.6072 | train_acc 0.8920 | test_loss 1.2792 | test_acc 0.6031 | lr 0.0342
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 179/256 | train_loss 0.6789 | train_acc 0.7860 | test_loss 1.3807 | test_acc 0.5924 | lr 0.0336
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 180/256 | train_loss 0.4130 | train_acc 0.8220 | test_loss 1.3932 | test_acc 0.5995 | lr 0.0330
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 181/256 | train_loss 0.7056 | train_acc 0.7640 | test_loss 1.3967 | test_acc 0.5973 | lr 0.0324
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 182/256 | train_loss 0.6802 | train_acc 0.7840 | test_loss 1.3399 | test_acc 0.5852 | lr 0.0319
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 183/256 | train_loss 0.7833 | train_acc 0.7480 | test_loss 1.2572 | test_acc 0.5991 | lr 0.0313
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 184/256 | train_loss 0.8378 | train_acc 0.7300 | test_loss 1.2214 | test_acc 0.6067 | lr 0.0307
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 185/256 | train_loss 0.6942 | train_acc 0.8080 | test_loss 1.1944 | test_acc 0.6231 | lr 0.0301
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 186/256 | train_loss 0.5927 | train_acc 0.8400 | test_loss 1.2737 | test_acc 0.6061 | lr 0.0295
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 187/256 | train_loss 0.6472 | train_acc 0.8780 | test_loss 1.2563 | test_acc 0.6183 | lr 0.0289
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 188/256 | train_loss 0.7507 | train_acc 0.8280 | test_loss 1.2922 | test_acc 0.6049 | lr 0.0283
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 189/256 | train_loss 0.8195 | train_acc 0.7220 | test_loss 1.2607 | test_acc 0.6159 | lr 0.0277
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 190/256 | train_loss 0.4783 | train_acc 0.9080 | test_loss 1.4506 | test_acc 0.5992 | lr 0.0271
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 191/256 | train_loss 0.4891 | train_acc 0.9000 | test_loss 1.2513 | test_acc 0.6219 | lr 0.0265
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 192/256 | train_loss 0.8663 | train_acc 0.6680 | test_loss 1.2267 | test_acc 0.6096 | lr 0.0259
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 193/256 | train_loss 0.6177 | train_acc 0.8700 | test_loss 1.1847 | test_acc 0.6271 | lr 0.0253
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 194/256 | train_loss 0.6942 | train_acc 0.8420 | test_loss 1.1558 | test_acc 0.6348 | lr 0.0246
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 195/256 | train_loss 0.9324 | train_acc 0.7440 | test_loss 1.2815 | test_acc 0.5836 | lr 0.0240
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 196/256 | train_loss 0.5017 | train_acc 0.8840 | test_loss 1.1860 | test_acc 0.6277 | lr 0.0234
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 197/256 | train_loss 0.7478 | train_acc 0.7700 | test_loss 1.2116 | test_acc 0.6220 | lr 0.0228
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 198/256 | train_loss 1.0324 | train_acc 0.7300 | test_loss 1.1181 | test_acc 0.6313 | lr 0.0222
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 199/256 | train_loss 0.9514 | train_acc 0.6500 | test_loss 1.1635 | test_acc 0.6207 | lr 0.0216
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 200/256 | train_loss 0.4965 | train_acc 0.8860 | test_loss 1.2840 | test_acc 0.6223 | lr 0.0210
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 201/256 | train_loss 1.0969 | train_acc 0.6540 | test_loss 1.1866 | test_acc 0.6275 | lr 0.0204
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 202/256 | train_loss 0.5507 | train_acc 0.8040 | test_loss 1.1649 | test_acc 0.6415 | lr 0.0198
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 203/256 | train_loss 0.8303 | train_acc 0.6400 | test_loss 1.1773 | test_acc 0.6196 | lr 0.0192
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 204/256 | train_loss 0.5366 | train_acc 0.8540 | test_loss 1.1834 | test_acc 0.6281 | lr 0.0186
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 205/256 | train_loss 0.4304 | train_acc 0.9440 | test_loss 1.1946 | test_acc 0.6404 | lr 0.0181
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 206/256 | train_loss 0.5665 | train_acc 0.8840 | test_loss 1.1580 | test_acc 0.6427 | lr 0.0175
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 207/256 | train_loss 0.5231 | train_acc 0.9220 | test_loss 1.3403 | test_acc 0.6098 | lr 0.0169
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 208/256 | train_loss 0.5410 | train_acc 0.8200 | test_loss 1.2558 | test_acc 0.6283 | lr 0.0163
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 209/256 | train_loss 0.4980 | train_acc 0.8880 | test_loss 1.1972 | test_acc 0.6361 | lr 0.0158
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 210/256 | train_loss 0.4279 | train_acc 0.8900 | test_loss 1.2332 | test_acc 0.6392 | lr 0.0152
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 211/256 | train_loss 0.5705 | train_acc 0.8740 | test_loss 1.1785 | test_acc 0.6496 | lr 0.0147
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 212/256 | train_loss 0.5494 | train_acc 0.8660 | test_loss 1.1795 | test_acc 0.6422 | lr 0.0141
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 213/256 | train_loss 0.3660 | train_acc 0.9260 | test_loss 1.2437 | test_acc 0.6418 | lr 0.0136
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 214/256 | train_loss 0.8209 | train_acc 0.7020 | test_loss 1.1857 | test_acc 0.6374 | lr 0.0131
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 215/256 | train_loss 0.4165 | train_acc 0.9440 | test_loss 1.1677 | test_acc 0.6501 | lr 0.0125
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 216/256 | train_loss 0.6061 | train_acc 0.8580 | test_loss 1.1795 | test_acc 0.6463 | lr 0.0120
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 217/256 | train_loss 0.4567 | train_acc 0.9060 | test_loss 1.1944 | test_acc 0.6485 | lr 0.0115
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 218/256 | train_loss 0.7707 | train_acc 0.6580 | test_loss 1.1613 | test_acc 0.6404 | lr 0.0110
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 219/256 | train_loss 0.8712 | train_acc 0.8020 | test_loss 1.1889 | test_acc 0.6344 | lr 0.0105
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 220/256 | train_loss 0.8267 | train_acc 0.7160 | test_loss 1.1407 | test_acc 0.6428 | lr 0.0100
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 221/256 | train_loss 0.3096 | train_acc 0.9400 | test_loss 1.1493 | test_acc 0.6494 | lr 0.0095
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 222/256 | train_loss 0.5447 | train_acc 0.8000 | test_loss 1.1973 | test_acc 0.6473 | lr 0.0091
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 223/256 | train_loss 0.6520 | train_acc 0.8560 | test_loss 1.1761 | test_acc 0.6448 | lr 0.0086
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 224/256 | train_loss 0.8334 | train_acc 0.8160 | test_loss 1.1553 | test_acc 0.6347 | lr 0.0082
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 225/256 | train_loss 0.3539 | train_acc 0.9020 | test_loss 1.1936 | test_acc 0.6433 | lr 0.0077
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 226/256 | train_loss 0.5884 | train_acc 0.8500 | test_loss 1.1804 | test_acc 0.6455 | lr 0.0073
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 227/256 | train_loss 0.7169 | train_acc 0.8060 | test_loss 1.1609 | test_acc 0.6462 | lr 0.0069
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 228/256 | train_loss 0.6510 | train_acc 0.7840 | test_loss 1.2011 | test_acc 0.6380 | lr 0.0065
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 229/256 | train_loss 0.7971 | train_acc 0.7100 | test_loss 1.1661 | test_acc 0.6362 | lr 0.0061
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 230/256 | train_loss 0.4556 | train_acc 0.9180 | test_loss 1.1872 | test_acc 0.6403 | lr 0.0057
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 231/256 | train_loss 0.5617 | train_acc 0.8640 | test_loss 1.1761 | test_acc 0.6426 | lr 0.0054
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 232/256 | train_loss 0.4646 | train_acc 0.8440 | test_loss 1.2162 | test_acc 0.6441 | lr 0.0050
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 233/256 | train_loss 0.6359 | train_acc 0.8480 | test_loss 1.1782 | test_acc 0.6431 | lr 0.0047
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 234/256 | train_loss 0.2055 | train_acc 0.9680 | test_loss 1.2573 | test_acc 0.6453 | lr 0.0043
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 235/256 | train_loss 0.7654 | train_acc 0.7140 | test_loss 1.1610 | test_acc 0.6426 | lr 0.0040
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 236/256 | train_loss 0.4680 | train_acc 0.9360 | test_loss 1.1680 | test_acc 0.6484 | lr 0.0037
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 237/256 | train_loss 0.6200 | train_acc 0.7120 | test_loss 1.1250 | test_acc 0.6461 | lr 0.0034
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 238/256 | train_loss 0.4731 | train_acc 0.8800 | test_loss 1.1462 | test_acc 0.6474 | lr 0.0031
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 239/256 | train_loss 0.3124 | train_acc 0.8860 | test_loss 1.1972 | test_acc 0.6518 | lr 0.0029
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 240/256 | train_loss 0.7197 | train_acc 0.8380 | test_loss 1.1403 | test_acc 0.6519 | lr 0.0026
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 241/256 | train_loss 0.6048 | train_acc 0.8020 | test_loss 1.1353 | test_acc 0.6524 | lr 0.0024
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 242/256 | train_loss 0.5214 | train_acc 0.8780 | test_loss 1.1324 | test_acc 0.6521 | lr 0.0022
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 243/256 | train_loss 0.8837 | train_acc 0.8020 | test_loss 1.1204 | test_acc 0.6492 | lr 0.0019
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 244/256 | train_loss 0.7668 | train_acc 0.8000 | test_loss 1.0985 | test_acc 0.6509 | lr 0.0017
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 245/256 | train_loss 0.4060 | train_acc 0.8900 | test_loss 1.1177 | test_acc 0.6541 | lr 0.0016
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 246/256 | train_loss 0.4461 | train_acc 0.8720 | test_loss 1.1199 | test_acc 0.6549 | lr 0.0014
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 247/256 | train_loss 0.3501 | train_acc 0.8880 | test_loss 1.1447 | test_acc 0.6553 | lr 0.0012
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 248/256 | train_loss 0.6588 | train_acc 0.8700 | test_loss 1.1415 | test_acc 0.6534 | lr 0.0011
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 249/256 | train_loss 0.5007 | train_acc 0.8460 | test_loss 1.1496 | test_acc 0.6506 | lr 0.0010
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 250/256 | train_loss 0.6320 | train_acc 0.8660 | test_loss 1.1121 | test_acc 0.6530 | lr 0.0009
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 251/256 | train_loss 0.5225 | train_acc 0.8300 | test_loss 1.1216 | test_acc 0.6541 | lr 0.0008
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 252/256 | train_loss 0.2891 | train_acc 0.9480 | test_loss 1.1790 | test_acc 0.6559 | lr 0.0007
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 253/256 | train_loss 0.5545 | train_acc 0.8040 | test_loss 1.1474 | test_acc 0.6547 | lr 0.0006
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 254/256 | train_loss 0.3988 | train_acc 0.8420 | test_loss 1.1284 | test_acc 0.6577 | lr 0.0006
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 255/256 | train_loss 0.7561 | train_acc 0.7900 | test_loss 1.1081 | test_acc 0.6561 | lr 0.0005
+[INFO] rainbow_memory.py:184 > Task 4 | Epoch 256/256 | train_loss 0.3701 | train_acc 0.8800 | test_loss 1.1496 | test_acc 0.6536 | lr 0.0005
+[INFO] finetune.py:157 > Apply after_task
+[WARNING] finetune.py:230 > Already updated the memory during this iter (4)
+[INFO] main.py:398 > [2-4] Update the information for the current task
+[INFO] finetune.py:157 > Apply after_task
+[WARNING] finetune.py:230 > Already updated the memory during this iter (4)
+[INFO] main.py:405 > [2-5] Report task result
+[INFO] main.py:432 > ======== Summary =======
+[INFO] main.py:434 > A_last 0.6577 | A_avg 0.7462150000000001 | F_last 0.1952500008046627 | I_last -0.6577
